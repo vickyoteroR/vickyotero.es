@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Window</title>
+		<meta charset="UTF8">
+	</head>
+	<body>
+		<button>Abrir Google en nueva ventana</button>
+		<button>Abrir Google en nueva pestaña</button>
+		<button>Abrir nueva ventana con contenido personalizado</button>
+
+		<script>
+
+			const botones = document.getElementsByTagName('button');
+
+			botones[0].onclick = function(){
+
+				open("http://www.google.es", "Google", "width=1200,height=800,tollbar=no");
+			}
+
+			botones[1].onclick = function(){
+
+				open("http://www.google.es");
+			}
+
+			botones[2].onclick = function(){
+
+				const ventana = open("", "Ventana", "width=600,height=400,tollbar=yes");
+				ventana.document.write("<p>Este contenido viene desde el script</p>")
+			}
+
+		</script>
+	</body>
+</html>

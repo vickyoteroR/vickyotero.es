@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Fechas</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+ 
+	<script>
+
+		const objFecha = new Date();
+		console.log(objFecha);
+		const objFechaPasada = new Date( objFecha.setFullYear( objFecha.getFullYear() - 18) );
+		console.log(objFechaPasada);
+
+		
+		
+		document.write("Hace 18 años era: " + objFechaPasada + "<br><br>");
+
+
+
+		const objFecha2 = new Date();
+		const objFechaFutura = new Date( objFecha.setHours( objFecha.getHours() + 2 ) );
+
+		document.write("Dentro de dos horas será: " + objFechaFutura + "<br><br>");
+
+	</script>	
+
+	</body>
+</html>

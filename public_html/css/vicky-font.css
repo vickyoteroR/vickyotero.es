@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url('../fonts/vickyfonts/stylesheet.css');
+@import url('../fonts/webfonts/junction.css');
+
+.myself p {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+/*********************/
+/*comun*/
+/***************/
+*,
+body {
+  font-family: 'Junction';
+}
+
+.navbar-collapse .navbar-nav>li>a,
+footer .text {
+  font-family: 'League Gothic', arial, sans-serif;
+  letter-spacing: 0.75pt;
+}
+
+.navbar-collapse .navbar-nav>li>a,
+footer .text {
+  font-size: 150%;
+}
+
+
+
+/*color*/
+/***************/
+.navbar-collapse.collapse .navbar-nav>li>a,
+.header.addBg .navbar-collapse.collapse .navbar-nav>li>a,
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav a:hover,
+.navbar-inverse .navbar-nav a:focus,
+#introText p {
+  color: #cccccc;
+}
+
+.title-section {
+  text-align: center;
+  color: #434D59;
+}
+
+#aboutUs h3 {
+  color: #666666;
+}
+
+footer .text a {
+  color: #0C69B7;
+}
+
+footer .social a {
+  color: #6D6D6D;
+}
+
+/*************/
+
+
+.poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* devanagari */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v3/gG8m82oGcrBJF727xHU04fY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+02BC, U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200B-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v3/F4YWuALHubF63LLQPw0rMfY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v3/HLBysyo0MQBO_7E-DWLwzg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+/*cita*/
+/*********************/
+.nothing {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Nothing You Could Do';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nothing You Could Do'), local('NothingYouCouldDo'), url(https://fonts.gstatic.com/s/nothingyoucoulddo/v6/jpk1K3jbJoyoK0XKaSyQAW3tIVbDRfcAbwPiWONb82U.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}

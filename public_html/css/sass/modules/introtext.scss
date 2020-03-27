@@ -1,0 +1,28 @@
+@import'../variables';
+
+#introText {
+    overflow: hidden;
+
+    .container {
+        float: right;
+        min-width: 80%;
+        padding: 4em;
+        background: $yellow;
+    }
+
+    p,
+    span {
+        color: $gray;
+
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        font-family: 'Nothing You Could Do', cursive;
+        font-size: 120%;
+        font-weight: 700;
+    }
+}

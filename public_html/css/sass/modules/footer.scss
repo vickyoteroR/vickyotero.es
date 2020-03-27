@@ -1,0 +1,28 @@
+@import'../variables';
+
+.myself footer {
+    background: $yellow;
+
+    .social {
+        padding-right: 1em;
+
+        a {
+            color: $gray;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+
+/*footer*/
+footer .pull-right,
+footer .pull-right a {
+    font-family: 'League Gothic', arial, sans-serif;
+}
+
+footer .mail {
+    font-size: 60%;
+}

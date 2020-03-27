@@ -1,0 +1,30 @@
+@import'../variables';
+
+.portfolio {
+    * {
+        box-sizing: border-box;
+    }
+
+    nav {
+        .tab {
+            display: inline-block;
+            margin: 0 0 0 5px;
+            background: #cccccc;
+
+            a {
+                display: table;
+                height: 3em;
+
+                span {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0 1em;
+                    color: #666666;
+                    font-weight: 700;
+                    font-size: 120%;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Clases en Javascript</title>
+</head>
+
+<body>
+
+	<button id="detallesFactura">Ver detalles factura</button>
+	<button id="detallesAlbaran">Ver detalles albarán</button>
+	<button id="entregaAlbaran">Ver hora de entrega albarán</button>
+	<button id="totalFactura">Ver total factura</button>
+
+
+	<script>		
+
+		class Documento {
+
+			constructor(numero, fecha, cliente) {
+
+				this._numero = numero;
+				this._fecha = fecha;
+				this._cliente = cliente;
+			}
+
+			get detalles(){
+
+				const texto = this._tipo + " número " + this._numero + " con fecha " + this._fecha + " del cliente " + this._cliente;
+				return texto;
+			}
+		}
+
+
+		class Factura extends Documento {
+
+			constructor(numero, fecha, cliente, importe, impuesto) {
+
+				super(numero, fecha, cliente);
+				this._importe = importe;
+				this._impuesto = impuesto;
+				this._tipo = "Factura";
+			}
+
+			get total() {
+				return this._importe + this._impuesto;
+			}
+		}
+
+
+
+		class Albaran extends Documento {
+
+			constructor(numero, fecha, cliente, hora) {
+
+				super(numero, fecha, cliente);
+				this._hora = hora;
+				this._tipo = "Albarán";
+			}
+
+			get hora() {
+				return this._hora;
+			}
+		}
+
+
+
+		const factura = new Factura(2541, '14/02/2018', 'Ibis Hoteles', 1000, 210);
+		const albaran = new Albaran(5246, '22/03/2018', 'Accor Hoteles', "14:30");
+
+
+
+		document.getElementById('detallesFactura').onclick = function(){
+
+			alert(factura.detalles);
+		}
+
+		document.getElementById('detallesAlbaran').onclick = function(){
+
+			alert(albaran.detalles);
+		}
+
+		document.getElementById('entregaAlbaran').onclick = function(){
+
+			alert(albaran.hora);
+		}
+
+		document.getElementById('totalFactura').onclick = function(){
+
+			alert(factura.total);
+		}
+
+
+	</script>
+</body>
+
+</html>

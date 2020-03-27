@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			const texto = "Tres tristes tigres comían trigo en un trigal";
+			const coincidencias = texto.match(/tr/gi); 
+
+			document.write("Si buscamos 'tr' de forma case-insensitive, obtenemos: " + coincidencias + ".<br><br>");
+
+			document.write("Podemos acceder a cada índice del Array de forma independiente: " + coincidencias[0]);
+
+		</script>
+		
+	</body>
+</html>

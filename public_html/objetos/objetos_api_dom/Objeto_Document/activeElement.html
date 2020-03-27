@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+	</head>
+
+	<body>
+
+		<p id="mensaje">Haz click en cualquier parte para ver cuál es el elemento activo del documento.</p>	
+
+		<input type="text" value="Campo de texto"/>
+		<button>Botón</button>
+		<textarea>Textarea</textarea>
+
+		<script>
+
+			document.onclick = function() {
+			    const activo = document.activeElement.tagName;	// .tagName retorna el nombre de etiqueta
+			    document.getElementById("mensaje").innerHTML = activo;
+			}
+
+		</script>
+	</body>
+</html>

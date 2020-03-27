@@ -1,0 +1,3 @@
+.location-gallery .local.intro {overflow: hidden;padding: 3rem 1.5rem;background: #f2f2f2;}
+.location-gallery .local [id^="wowslider-"]{max-height: 100%!important;overflow-y:hidden;}
+.location-gallery .ws-title{display: none!important;}

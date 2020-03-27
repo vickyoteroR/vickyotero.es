@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Eventos</title>
+		<meta charset="UTF8"/>	
+	</head>
+
+	<body>
+
+	    <h3>Haz click en el documento</h3>	
+	    <p>Esperando resultado del click...</p>
+	    <p>Esperando resultado del mousemove...</p>
+
+    	<script>
+
+    		document.addEventListener('click', registroClick);
+
+	    	function registroClick(evento) {	    	
+	    		const registro = `Detalles del evento:<br>\
+	    		- El evento es de tipo ${evento.type}<br>\
+	    		- Has hecho click a ${evento.pageX}px del eje X de la pantalla<br>\
+	    		- Has hecho click a ${evento.pageY}px del eje Y de la pantalla<br>\
+	    		- Has hecho sobre un elemento ${evento.target}<br>\
+	    		- Has hecho click con el botón ${evento.button}`;
+
+	    		console.log(evento);
+	    		document.getElementsByTagName('p')[0].innerHTML = registro;
+			}
+
+
+
+			document.onmousemove = function(e) {
+	    		const registro = `Coordenadas actuales en píxeles: ${e.pageX}, ${e.pageY}`;
+	    		document.getElementsByTagName('p')[1].textContent = registro;
+			}
+
+			
+
+    	</script>   
+
+
+	</body>
+</html>

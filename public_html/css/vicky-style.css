@@ -1,0 +1,220 @@
+@import url('vicky-font.css');
+@import url('loader.css');
+
+.topHome {
+  border-radius: 100%;
+  padding: 0.5em;
+}
+
+/*HEADER*/
+/***********/
+.container-top h2 {
+  color: #cccccc;
+}
+
+/**/
+
+
+
+
+
+/*kENNEDY paragraph*/
+.parlex-back h2 {
+  font-size: 1em;
+}
+
+.parlex-back h2 span {
+  display: block;
+}
+
+.parlex-back em {
+  float: right;
+  font-size: 150%;
+  color: #cccccc;
+  padding-top: 1em;
+}
+
+.parlex-back h2 span {
+  font-size: 300% !important;
+}
+
+
+/*SKILLS*/
+.skillBox .ico {
+  text-align: center;
+}
+
+.skillBox .ico {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+}
+
+.skillBox .ico img {
+  width: 100%;
+}
+
+.skillBox.design .ico img {
+  background: url('../images/skills/skills-01.png')no-repeat;
+  background-size: 100%;
+}
+
+.skillBox.tech .ico img {
+  background: url('../images/skills/skills-02.png')no-repeat;
+  background-size: 100%;
+}
+
+.skillBox.cms .ico img {
+  background: url('../images/skills/skills-03.png')no-repeat;
+  background-size: 100%;
+}
+
+.skillBox .under-text {
+  text-align: center;
+}
+
+.skillBox .under-text h4 {
+  display: table;
+  height: 2.5em;
+  width: 100%;
+  color: #999999;
+  text-transform: uppercase;
+}
+
+.skillBox .under-text h4 span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*list-skill*/
+.skill .skillItem {
+  list-style: none;
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.skill .skillItem .box {
+  display: table;
+  height: 3em;
+}
+
+.skill .skillItem .box span {
+  display: table-cell;
+  vertical-align: middle;
+  color: #666666;
+}
+
+.skill .skillItem span {
+  width: 100%;
+  margin: 0.1em;
+  display: inline-block;
+}
+
+.skill .tech .skillItem {
+  width: 16.66666666666667%;
+}
+
+.skill .tech .skillItem .box {
+  background: rgba(128, 28, 65, 0.2);
+}
+
+.skill .cms .skillItem .box {
+  background: rgba(2, 157, 161, 0.2);
+}
+
+.skill .design .skillItem .box {
+  background: rgba(234, 100, 39, 0.2);
+}
+
+
+
+
+
+/* ----------- iPad mini ----------- */
+/* Portrait and Landscape */
+@media (min-device-width: 768px) and (max-device-width: 1280px) {
+  .experience .exp-wrapper .container {
+    top: 50%;
+  }
+
+  .experience .div-img .img {
+    -moz-transform: rotate(0deg) translateY(0px);
+    -webkit-transform: rotate(0deg) translateY(0px);
+    -o-transform: rotate(0deg) translateY(0px);
+    -ms-transform: rotate(0deg) translateY(0px);
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+
+/*mobile*/
+
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  .header .navbar-collapse.in #mainNav {
+    background: rgba(0, 0, 0, 0.8) !important;
+    margin: 0;
+  }
+
+  .header .navbar-collapse.in {
+    padding: 0;
+    border: none;
+    height: 19em !important;
+    overflow-y: scroll;
+  }
+
+  .header .navbar-collapse li {
+    text-align: right;
+  }
+
+  .header .navbar-collapse.collapsing {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header .navbar-nav {
+    margin: 0;
+  }
+
+  .skill .tech .skillItem {
+    width: 33.33%;
+  }
+
+  .skillBox .ico {
+    width: 5em;
+    height: 5em;
+  }
+
+  .skillBox h4 {
+    font-size: 100%;
+  }
+
+  .experience .exp-wrapper {
+    padding-top: 7em;
+  }
+
+  .experience .exp-wrapper .container {
+    width: 100%;
+  }
+
+  .experience .div-img .text {
+    display: none;
+  }
+
+  .portfolio nav .tab a span {
+    font-size: 100%;
+  }
+
+  .experience .exp-wrapper .container {
+    top: 50%;
+  }
+
+  .experience .div-img .img {
+    -moz-transform: rotate(0deg) translateY(0px);
+    -webkit-transform: rotate(0deg) translateY(0px);
+    -o-transform: rotate(0deg) translateY(0px);
+    -ms-transform: rotate(0deg) translateY(0px);
+    transform: rotate(0deg) translateY(0px);
+  }
+}

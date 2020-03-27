@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Métodos strings</title>
+		<meta charset="UTF8"/>	
+	</head>
+	<body>
+		<script>
+
+			const texto = "Buscamos palabras y palabritas y también palabrotas en una frase llena de palabros";
+			const texto1 = texto.replace("palabras", "***");
+			const texto2 = texto.replace(/(palabr\S+)/gi, "***"); 
+						   //cubre todas las palabras completas que comienzan con "palabr"
+
+
+			document.write("String incial: " + texto + "<br><br>");
+			document.write("String tras sustitución simple: " + texto1 + "<br><br>");
+			document.write("String tras sustitución mediante expresión regular: " + texto2 + "<br><br>");
+
+		</script>
+		
+	</body>
+</html>

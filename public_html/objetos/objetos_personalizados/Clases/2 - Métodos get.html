@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+  <meta charset="UTF-8">
+  <title>Clases en Javascript</title>
+</head>
+
+<body>
+
+	<button id="total">Ver total factura 1</button>
+	<button id="detalles">Ver detalles factura 2</button>
+
+	<script>
+
+		class Factura {
+
+			constructor(numero, fecha, cliente, subtotal, impuesto) {
+
+				this._numero = numero;
+				this._fecha = fecha;
+				this._cliente = cliente;
+				this._subtotal = subtotal;
+				this._impuesto = impuesto;
+			}
+
+			get total() {
+				return this._subtotal + this._impuesto;
+			}
+
+			get detalles(){
+
+				const texto = "Documento número " + this._numero + " con fecha " + this._fecha + " del cliente " + this._cliente;
+				return texto;
+			}
+
+		}
+
+		const factura1 = new Factura(2541, '14/02/2018', 'Ibis Hoteles', 1000, 210);
+		const factura2 = new Factura(5246, '22/03/2018', 'Accor Hoteles', 2000, 420);
+		const factura3 = new Factura(2541, '31/01/2018', 'Holiday Inn', 1500, 315);
+
+
+
+		document.getElementById('total').onclick = function(){
+
+			alert(factura1.total);
+		}
+
+		document.getElementById('detalles').onclick = function(){
+
+			alert(factura2.detalles);
+		}
+
+
+	</script>
+</body>
+
+</html>

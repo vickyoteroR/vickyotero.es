@@ -1,0 +1,102 @@
+.technologies {
+    padding: 2em 0;
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 5px 0px rgb a(0, 0, 0, 0.75);
+
+    .filter {
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .tab {
+            width: 50px;
+            margin: 0 20px;
+            list-style: none;
+
+            .ima {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .tech {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @media (max-width:980px) {
+            padding: 0 1em;
+        }
+
+        &-option {
+            list-style: none;
+
+            @media (min-width:980px) {
+                width: 11.11111%;
+            }
+
+            @media (max-width:980px) {
+                width: 16.66666%;
+            }
+
+            @media (max-width:480px) {
+                width: 25%;
+            }
+
+            img {
+                opacity: 0.8;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+
+            &:hover {
+                img {
+                    opacity: 1;
+                    -webkit-filter: grayscale(0);
+                    filter: grayscale(0);
+                }
+
+            }
+        }
+    }
+
+
+    .isotope-item {
+        padding: 0;
+        border: 1px solid #cccccc;
+    }
+
+    .portfolio-item {
+        img {
+            opacity: 0.8;
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+
+        &:hover {
+            img {
+                opacity: 1;
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+
+        }
+
+        .portfolio-desc {
+            background: none;
+
+
+
+            .folio-info {
+                display: none;
+            }
+        }
+    }
+}

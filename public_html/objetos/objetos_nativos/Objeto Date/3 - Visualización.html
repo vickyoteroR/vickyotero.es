@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Fechas</title>
+		<meta charset="UTF8"/>		
+	</head>
+	<body>
+
+	<script>
+
+
+		const objFecha = new Date();
+
+
+
+		document.write("Fecha en es-ES sin opciones: " + objFecha.toLocaleString('es-ES') + "<br><br>");
+
+
+
+		const opcionesFecha1 = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+		const fechaFormateada1 = objFecha.toLocaleString('es-ES', opcionesFecha1);
+
+		document.write("Fecha en es-ES con opciones: " + fechaFormateada1 + "<br><br>");
+
+
+
+
+
+		var opcionesFecha2 = { weekday: 'short', year: '2-digit', month: '2-digit', day: '2-digit', hour: 'numeric', minute: 'numeric', era: 'long' };
+		var fechaFormateada2 = objFecha.toLocaleString('es-ES', opcionesFecha2);
+
+		document.write("Fecha en es-ES con opciones: " + fechaFormateada2 + "<br><br>");
+
+
+
+
+		var opcionesFecha3 = {hour: 'numeric', minute: 'numeric', second: 'numeric'};
+		var fechaFormateada3 = objFecha.toLocaleString('es-ES', opcionesFecha3);
+
+		document.write("Fecha en es-ES con opciones: " + fechaFormateada3 + "<br><br><br><br>");
+
+
+
+
+
+
+
+		var dia = objFecha.getDate();
+		var mes = (objFecha.getMonth()) + 1;	//sumamos uno para convertir el mes de JS (del 0 al 11) en mes natural (de 1 a 12)
+		var anho = objFecha.getFullYear();
+		var hor = objFecha.getHours();
+		var min = objFecha.getMinutes();
+		var seg = objFecha.getSeconds();						
+
+		document.write("Componentes aislados de fecha: "+ dia +" del mes "+ mes +", de "+ anho +", y ahora son las "+ hor +":"+ min +":"+ seg +".<br><br>");
+
+
+
+
+
+
+		if(dia < 10) { dia = '0' + dia; }
+		if(mes < 10) { mes = '0' + mes; }
+		if(hor < 10) { hor = '0' + hor; }
+		if(min < 10) { min = '0' + min; }
+		if(seg < 10) { seg = '0' + seg; }	
+
+		document.write("Con '0' concatenado: día "+ dia +" del "+ mes +", del año "+ anho +", y ahora son las "+ hor +":"+ min +":"+ seg +".<br><br><br><br>");
+
+
+
+
+
+		const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+		const indiceMes = objFecha.getMonth();
+		const fechaEsp = dia +" de "+ meses[indiceMes] +", del año "+ anho;
+
+		document.write("Traducción manual de meses mediante Array: "+ fechaEsp +".<br><br>");
+
+	</script>	
+
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Eventos</title>            
+	</head>
+	<body>
+		
+		<h3>Escribe aquí en minúsculas y presiona ESC:</h3>
+		<input id="campo" type="text" placeholder="Sí, aquí...">
+
+		<script>
+
+			document.getElementById('campo').onkeyup = saneaContenido;
+
+			function saneaContenido(evento) {
+
+				console.log(evento);
+
+				const contenido = evento.target.value;
+				const contenidoSaneado = contenido.toUpperCase();
+				evento.target.value = contenidoSaneado;
+
+
+				if (evento.keyCode === 27) {
+
+					const borrar = confirm('¿Deseas borrar su contenido?');
+
+					if (borrar) {
+
+						evento.target.value = "";
+					}
+				}			  
+			}
+
+		</script>
+
+       </body>
+</html>

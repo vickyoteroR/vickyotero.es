@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Objeto Navigator</title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <script>
+
+            const navegador = navigator.userAgent;
+
+            document.write("Tu userAgent es <strong>" + navegador + "</strong><br>");
+
+            if (navigator.userAgent.indexOf('MSIE') !== -1) {
+
+                document.write("Estás usando Internet Explorer ...");
+
+            } else if (navigator.userAgent.indexOf('Firefox') !== -1) {
+
+                document.write("Estás usando Firefox ...");
+
+            } else if (navigator.userAgent.indexOf('Chrome') !== -1) {
+
+                document.write("Estás usando Google Chrome ...");
+
+            } else if (navigator.userAgent.indexOf('Opera') !== -1) {
+
+                document.write("Estás usando Opera ...");
+
+            } else if (navigator.userAgent.indexOf('Trident') !== -1) {
+
+                document.write("Estás usando el nuevo IE ...");
+
+            } else {
+
+                document.write("Estás usando un navegador no identificado ...");
+            }
+        </script>
+    </body>
+</html> 

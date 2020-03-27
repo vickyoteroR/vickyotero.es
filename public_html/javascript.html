@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Objeto Document</title>
+		<meta charset="UTF8"/>
+		<style>
+		body{font-family: sans-serif;}
+		h2{background: #539cfc;color:#ffffff;padding: 0.5em;margin-left:1rem;}
+		h3{margin-left: 2rem;}
+		li{background: #cccccc;border-bottom: 1px solid #999999;padding:10px;list-style: none;}
+		li span{display:inline-block;color:grey;padding-left: 1rem;}
+		[class^="headTab"]{padding: 0.5rem 1rem;cursor:default;}
+		.headTab{background: silver;color: #0050ff;}
+		[class^="headTab"]:before{content: '';display: inline-block;width: 24px;height: 24px;padding-right: 1em;
+		background:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDUxMCA1MTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMCA1MTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0iYWRkLWNpcmNsZSI+CgkJPHBhdGggZD0iTTI1NSwwQzExNC43NSwwLDAsMTE0Ljc1LDAsMjU1czExNC43NSwyNTUsMjU1LDI1NXMyNTUtMTE0Ljc1LDI1NS0yNTVTMzk1LjI1LDAsMjU1LDB6IE0zODIuNSwyODAuNWgtMTAydjEwMmgtNTF2LTEwMiAgICBoLTEwMnYtNTFoMTAydi0xMDJoNTF2MTAyaDEwMlYyODAuNXoiIGZpbGw9IiMwMDUwZmYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K)no-repeat;}
+		[class^="headTab"]:hover{background: grey;color:#ffffff;}
+		[class^=tab]{display: none;}
+		[class^="headTab"].active + [class^=tab]{display: block;}
+		[class^="headTab"].active:before{
+			background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE2IDE2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNiAxNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik04LDBDMy41ODIsMCwwLDMuNTgyLDAsOHMzLjU4Miw4LDgsOHM4LTMuNTgyLDgtOFMxMi40MTgsMCw4LDB6IE0xMiw5SDRWN2g4Vjl6IiBmaWxsPSIjMDA1MGZmIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)no-repeat;}
+		.tab.active{display: block;}
+		</style>
+	</head>
+	<body id="objetos">
+		<div class="search">
+			
+		</div>
+		<h1 class="headTab">Objetos API DOM</h1>
+		<section class="tab1 ApiDom">
+			<h2 class ="headTab2">Objeto Document</h2>
+			<ul class ="tab2">
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/activeElement.html">activeElement</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/baseURI.html">baseURL</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/characterSet.html">characterSet</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/doctype.html">doctype</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/domain.html">domain</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/lastModified.html">lastModified</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Document/title.html">title</a></li>
+			</ul>
+			<h2 class ="headTab2">Objeto Event</h2>
+			<ul class ="tab2">
+				<li><a href="objetos/objetos_api_dom/Objeto_Event/Evento de ratón.html">Evento de ratón</a></li>
+				<li><a href="objetos/objetos_api_dom/Objeto_Event/Evento de teclado.html">Evento de teclado</a> </li>
+			</ul>
+			<h2 class ="headTab2">Objeto History</h2>
+			<ul class ="tab2">
+				<li><a href="objetos/objetos_api_dom/Objeto History/back().html">back()</a><span>Ir a la página anterior del historial</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto History/forward().html">forward()</a><span>Ir a la página siguiente del historial</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto History/go().html">go()</a><span>Ir a dos páginas antes del historial</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto History/length.html">length</a><span>Arroja la longitud del historial de la pestaña</span> </li>
+			</ul>
+			<h2 class ="headTab2">Objeto Location</h2>
+			<ul class ="tab2">
+				<li><a href="objetos/objetos_api_dom/Objeto Location/hash.html">hash</a> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Location/protocol.html">protocol</a><span>Arroja el tipo de documento que es "file"</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Location/assign().html">assign()</a><span>Asigna una URL</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Location/replace().html">replace()</a><span>Reemplaza URL actual por la que le digamos</span>  </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Location/reload().html">reload()</a> <span>Recarga la página</span></li>
+				
+				
+			</ul>
+			<h2 class ="headTab2">Objeto Navigator</h2>
+			<ul class ="tab2">
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/appCodeName.html ">appCodeName</a> <span>Datos del navegador</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/appName.html ">appName</a> <span>Motor del navegador</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/appVersion.html ">appVersion</a> <span>Versión del navegador</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/connection.html ">connection</a> <span>Motor del navegador</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/languaje.html ">languaje</a> <span>Idioma del navegador</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/online.html ">online</a> <span>Motor del navegador</span> </li>
+				<li><a href="objetos/objetos_api_dom/Objeto Navigator/platform.html ">platform</a> <span>Motor del navegador</span> </li>
+			</ul>
+			<h2 class ="headTab2">Objeto Window</h2>
+			<div class="tab2">
+				<h3><a href="objetos/objetos_api_dom/objeto_window/Metodos/Metodos del objeto Window.pdf">Métodos</a> </h3>
+				<ul>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Metodos/clearInterval().html">clearInterval()</a></li>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Metodos/clearTimeout().html">clearTimeout()</a></li>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Metodos/open() focus() close().html">open() focus() close()</a></li>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Metodos/open().html">open()</a></li>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Metodos/setInterval().html">setInterval()</a></li>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Metodos/setTimeout().html">setTimeout()</a></li>
+				</ul>
+				<h3><a href="objetos/objetos_api_dom/objeto_window/Propiedades/Propiedades del objeto Window.pdf">Propiedades</a> </h3>
+				<ul>
+					<li><a href="objetos/objetos_api_dom/objeto_window/Propiedades/innerHeight outerHeight innerWidth outerWidth.html">innerHeight outerHeight innerWidth outerWidth</a><span></span> </li>
+					<li><a href="https://www.w3schools.com/jsref/prop_node_textcontent.asp">textContent</a> <span>Extrae el string que contiene la etiqueta</span> </li>
+				</ul>
+			</div>
+		</section>
+		<h1 class="headTab">Objetos NATIVOS</h1>
+		<section class="tab1 nativos">
+			<h2 class="headTab2"><a href="objetos/objetos_nativos/Objeto Array/Metodos y propiedades Array.pdf"> Objeto Array</a></h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/concat().html">concat()</a>
+					<span>Concatena (suma) a un Array otros Arrays, creando uno único</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/forEach().html">forEach()</a>
+					<span>Itera sobre el Array accediendo a cada posición</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/of().html">Array.of()</a>
+					<span>Declara un Array con los valores pasados como argumentos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/from().html">Array.from()</a>
+					<span>Devuelve cada letra independiente de cada elemento de un array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/indexOf).html">indexOf)</a>
+					<span>Devuelve el índice(posición) del elemento que le indiquemos dentro de un Array </span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/join().html">join()</a>
+					<span>Convierte un Array en un string, usando como separador el string deseado (/)</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/length.html">length</a>
+					<span>Reporta cuantos elementos componen un array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/slice().html">slice()</a>
+					<span>Elimina un rango de elementos de un array </span>
+				</li>
+				
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/splice().html">splice()</a>
+					<span>Añade o elimina los elementos que se deseen a un Array, a partir de la posición deseada</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/shift().html">shift()</a>
+					<span>Elimina el primer elemento de un array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/push().html">push()</a>
+					<span>Agrega un elemento al final del array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/pop().html">pop()</a>
+					<span>Elimina el úlitmo elemento de un array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/unshift().html">unshift()</a>
+					<span>Agrega un elemento al principio del array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/reverse().html">reverse()</a>
+					<span>Invierte el orden de los elementos de un array</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Array/sort().html">sort()</a>
+					<span>Ordena los elementos de un Array por orden alfabético </span>
+				</li>
+			</ul>
+			<h2 class="headTab2"><a href="objetos/objetos_nativos/Objeto Date/Métodos objeto Date.pdf"> Objeto Date</a></h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Date/1 - Creación.html">1 - Creación</a>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Date/2 - Manipulación.html">2 - Manipulación</a>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Date/3 - Visualización.html">3 - Visualización</a>
+				</li>
+			</ul>
+			<h2 class="headTab2">Objeto Math</h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.abs().html">Math.abs()</a>
+					<span>Haya el valor absoluto de un número</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.round().html">Math.round()</a>
+					<span> retorna el valor de un número redondeado al número entero más cercano</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.ceil().html">Math.ceil()</a>
+					<span>Haya el número entero mayor o igual</span>
+				</li>
+
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.floor().html">Math.floor()</a>
+					<span>Haya el número entero menor o igual</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.max().html">Math.max()</a>
+					<span>Haya el número mayor</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.min().html">Math.min()</a>
+					<span>Haya el número menor</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Math/Math.random().html">Math.random()</a>
+					<span>etorna un valor aleatorio entre 0 y 1</span>
+				</li>
+
+			</ul>
+			<h2 class="headTab2">Objeto Number</h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Number/toFixed().html">toFixed()</a>
+					<span>Retorna el valor númerico con los decimales que indiquemos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Number/toLocaleString().html">toLocaleString()</a>
+					<span>Retorna el valor numérico adecuando a la sintaxis local de la codificiación de idioma </span>
+				</li>
+			</ul>
+			<h2 class="headTab2">Objeto String</h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/chartAt().html">chartAt()</a>
+					<span>Arroja el caracter que se encuentra en la posición que le indiquemos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/concat().html">concat()</a>
+					<span>Concatena los string inyectados en las variables</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/endsWith().html">endsWith()</a>
+					<span>Arroja true or false, a la pregunta de si un objeto acaba con un string concreto</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/startsWith().html">startsWith()</a>
+					<span>Arroja true or false, a la pregunta de si un objeto empieza con un string concreto</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/includes().html">includes()</a>
+					<span>Arroja true or false, a la pregunta de si un string contiene con un string concreto</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/indexOf().html">indexOf()</a>
+					<span>Arroja la posición en un string del caracter concreto que le indiquemos </span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/substr().html">substr()</a>
+					<span>Arroja el texto entre dos índices que le indiquemos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/length.html">length</a>
+					<span>Arroja la longitud de un objeto.</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/match().html">match()</a>
+					<span>Localiza un string de forma case-intesive</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/replace().html">replace()</a>
+					<span>Localiza un string concreto y lo sustituye por lo que le digamos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/search().html">search()</a>
+					<span>Arroja la posición de un sring concreto</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/slice().html">slice()</a>
+					<span>Corta los caracteres que se encuentren en la posición que le indiquemos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/split().html">split()</a>
+					<span>Divide un objeto en el punto que le indiquemos</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/toLowerCase() toUpperCase().html">toLowerCase() toUpperCase()</a>
+					<span>Cambia a mayúscula o a minúscula</span>
+				</li>
+				<li>
+					<a href="objetos/objetos_nativos/Objeto String/trim().html">trim()</a>
+					<span>Elimina espacios antes y después en un texto</span>
+				</li>
+			</ul>
+			<h2 class="headTab2">Objeto Set</h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_nativos/Objeto Set/set.html">set</a>
+				</li>
+			</ul>
+		</section>
+		<h1 class="headTab">Objetos PERSONALIZADOS</h1>
+		<section class="tab1 personalizados">
+			<h2 class="headTab2">Objetos literales</h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_personalizados/Objetos literales/1_inicializacion.html">1_inicializacion</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Objetos literales/2_propiedades.html">2_propiedades</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Objetos literales/3_metodos.html">3_metodos</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Objetos literales/4_metodos.html">4_metodos</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Objetos literales/5_metodos.html">5_metodos</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Objetos literales/6_anidacion.html">6_anidacion</a>
+					<span></span>
+				</li>
+			</ul>
+			<h2 class="headTab2">Clases</h2>
+			<ul class="tab2">
+				<li>
+					<a href="objetos/objetos_personalizados/Clases/1 - Método constructor.html">1 - Método constructor</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Clases/2 - Métodos get.html">2 - Métodos get</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Clases/3 - Métodos set.html">3 - Métodos set</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Clases/4 - Métodos prototype.html">4 - Métodos prototype</a>
+					<span></span>
+				</li>
+				<li>
+					<a href="objetos/objetos_personalizados/Clases/5 - Herencia.html">5 - Herencia</a>
+					<span></span>
+				</li>
+			</ul>
+		</section>
+		<script src ="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+			
+			$(document).ready(function(){
+				$('[class^="headTab"]').click(function(){
+					$(this).toggleClass('active');
+					if($(this).hasClass('active')){
+						$(this).siblings().removeClass('active');
+					}
+				});
+			});
+		</script>
+		
+	</body>
+</html>
