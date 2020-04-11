@@ -1,37 +1,33 @@
-@import'../variables';
+@import "../variables";
 
 /**/
 /*navbar***********/
-.navbar-collapse.collapse {
-    background: $gray !important;
+.navbar-collapse {
+  background: $gray !important;
 }
 
-
-
-.navbar-collapse.collapse .navbar-nav>li>a {
-    background: none !important;
+.navbar-collapse.collapse .navbar-nav > li > a {
+  background: none !important;
 }
 
-.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav a:hover,
 .navbar-inverse .navbar-nav a:focus {
-    background: none;
-    border-bottom: 2px solid #ffffff;
-    border-radius: 0px;
+  background: none;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 0px;
 }
-
-
 
 /*COLOR*/
 
 .header.addBg,
 .topHome {
-    background: $gray;
+  background: $gray;
 }
 
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle {
-    background: $gray;
-    border-color: $gray;
+  background: $gray;
+  border-color: $gray;
 }
