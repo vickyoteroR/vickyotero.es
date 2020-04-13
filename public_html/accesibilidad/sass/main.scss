@@ -1,0 +1,30 @@
+@import "./barrier.scss";
+@import "./intro.scss";
+$heigh-header: 70px;
+$padding-container: 0 20px;
+%mod-1080 {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+.accesibility {
+  .wrapper {
+    padding-bottom: 100px;
+  }
+  .content {
+    @extend %mod-1080;
+    padding-top: $heigh-header;
+    overflow: hidden;
+    &--box {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &-in {
+        width: 100%;
+        @media (min-width: 1000px) {
+          flex: 1 50%;
+        }
+      }
+    }
+  }
+}

@@ -53,7 +53,7 @@
   <link rel="stylesheet" type="text/css" href="../css/styles.css" />
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
   <link rel="stylesheet" type="text/css" href="../css/vicky-style.css" />
-  <link rel="stylesheet" type="text/css" href="css/accesibility.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
   <script src="../js/modernizr.custom.97074.js"></script>
   <noscript>
     <link rel="stylesheet" type="text/css" href="../css/efect/noJS.css" /></noscript>
@@ -131,66 +131,116 @@
         </div>
       </div>
     </section>
-
-    <section class="ac-container">
-      <ul>
-        <li>
-          <input id="ac-1" name="accordion-1" type="radio" checked="">
-          <label for="ac-1">Estructura semántica</label>
-          <article class="ac-small">
-            <p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that
-              show
-              to
-              the people who make shows, and on the strength of that one show they decide if they're going to make more
-              shows.
-            </p>
-          </article>
-        </li>
-        <li>
-          <input id="ac-2" name="accordion-1" type="radio">
-          <label for="ac-2">How we work</label>
-          <article class="ac-medium">
-            <p>Like you, I used to think the world was this great place where everybody lived by the same standards I
-              did,
-              then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a
-              world
-              where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules,
-              then
-              you're gonna have to pay the price. </p>
-          </article>
-        </li>
-      </ul>
-
-
-      <!-- <div>
-        <input id="ac-3" name="accordion-1" type="radio">
-        <label for="ac-3">References</label>
-        <article class="ac-large">
-          <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the
-            world
-            once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know
-            exactly
-            when we turned on each other, but I know that seven of us survived the slide... and only five made it out.
-            Now
-            we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it
-            wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
-        </article>
+    <div class="blocktitle">
+      <div class="blocktitle-in">
+        <h2 class="blocktitle__title">PRINCIPALES BARRERAS</h2>
+        <strong class="blocktitle__subtitle">DENTRO DEL MUNDO WEB</strong>
       </div>
-      <div>
-        <input id="ac-4" name="accordion-1" type="radio">
-        <label for="ac-4">Contact us</label>
-        <article class="ac-large">
-          <p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone.
-            How
-            it's possible, how it's done, what the dangers are. But then why fifty years in the future when the
-            spacecraft
-            encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they
-            don't
-            know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we
-            die
-            down here. Just as a matter of deductive logic. </p>
-        </article>
-      </div> -->
+    </div>
+    <section class="ac-container content">
+      <div class="content--box">
+        <ul>
+          <li class="barrier">
+            <input id="barrier__semantic" class="barrier__input" name="accordion-1" type="radio" checked="">
+            <label class="barrier__label" for="barrier__semantic">
+              <span class="barrier__text">Estructura semántica</span>
+            </label>
+            <article class="barrier__article barrier__article-medium">
+              <div class="barrier__article-data">
+                <p class="text">Es muy importante una estructura semática correcta para el lector de pantalla. </p>
+              </div>
+              <div class="barrier__article-example">
+                <img src="./img/semantica-incorrecta.jpg" alt="Código con ejemplo de semántica correcto">
+                <img src="./img/semantica-correcta.png" alt="Código con ejemplo de semántica correcto">
+              </div>
+            </article>
+          </li>
+          <li class="barrier">
+            <input id="barrier__img" class="barrier__input" name="accordion-1" type="radio">
+            <label class="barrier__label" for="barrier__img">IMÁGENES</label>
+            <article class="barrier__article barrier__article-small">
+              <div class="barrier__article-data">
+                <p class="text">Todas las imágenes deben llevar el atributo alt ="" donde se describirá la imagen</p>
+                <p class="text">igualmente se recomienda que el nombre de la imagen sea oritentativo mejor antes que
+                  poner img-1...</p>
+                <p class="text">Cuando las imágenes que son decorativas, es mejor dejar el alt="" vacío, ya que que no
+                  aportaría nada describir una línea </p>
+              </div>
+              <div class="barrier__article-example">
+                <img src="./img/imagenes-accesibles.png" alt="Código con ejemplo de imágenes accesibles">
+              </div>
+            </article>
+          </li>
+          <li class="barrier">
+            <input id="barrier__menu" class="barrier__input" name="accordion-1" type="radio">
+            <label class="barrier__label" for="barrier__menu">MENU</label>
+            <article class="barrier__article barrier__article-medium">
+              <div class="barrier__article-data">
+                <p class="text">Siempre que creemos un menú o cualquier interacción, se debe implementar dicha
+                  interacción tanto
+                  teclado como para rató
+                </p>
+              </div>
+              <div class="barrier__article-example">
+                <img src="./img/menu-accesible.png" alt="Código con ejemplo de menu accesible">
+
+              </div>
+            </article>
+          </li>
+          <li class="barrier">
+            <input id="barrier__modal" class="barrier__input" name="accordion-1" type="radio">
+            <label class="barrier__label" for="barrier__modal">VENTANAS MODALES</label>
+            <article class="barrier__article barrier__article-small">
+              <div class="barrier__article-data">
+                <p class="text">Las ventanas modales siempre se posicionan al final del DOM. Por dicho motivo, el lector
+                  no puede seguir interactuando, al no poder encontrar el contenido que debería obtener
+                  con la última acción realizada. Para evitar que el usuario tenga
+                  que recorrer todo el DOM hasta el final, estas son las medidas a tomar:
+                </p>
+                <p class="text">1. Quitar la página de detrás con aria ="hidden"</p>
+                <p class="text">2. Evitar que con el teclado "tab" nos saque de la ventana modal
+                </p>
+              </div>
+
+            </article>
+          </li>
+          <li class="barrier">
+            <input id="barrier__form" class="barrier__input" name="accordion-1" type="radio">
+            <label class="barrier__label" for="barrier__form">FORMULARIOS</label>
+            <article class="barrier__article barrier__article-large">
+              <div class="barrier__article-data">
+                <p class="text">
+                  Es muy importante que en los formularios se especifique el atrituto for="name" del
+                  <strong>label</strong>
+                  en
+                  concordancia con el id="name" del <strong>input</strong> .
+                </p>
+              </div>
+              <div class="barrier__article-example">
+                <img src="./img/input-accesible.png" alt="Código con ejemplo de formulario accesible">
+                <img src="./img/textarea-accesible.png" alt="Código con ejemplo de imágenes accesibles">
+                <img src="./img/select-accesible.png" alt="Código con ejemplo de imágenes accesibles">
+              </div>
+            </article>
+          </li>
+          <li class="barrier">
+            <input id="barrier__fieldset" class="barrier__input" name="accordion-1" type="radio">
+            <label class="barrier__label" for="barrier__fieldset">CHEKBOX / RADIO BUTTON</label>
+            <article class="barrier__article barrier__article-large">
+              <div class="barrier__article-data">
+                <p class="text">
+                  Cuando en un formulario tenemos varios checkbox / radio button, se deben agrupar en un
+                  <strong>fieldset</strong>
+                  con un <strong>lengend</strong> que determinará de que se tratan las opciones ofertadas.
+                </p>
+              </div>
+              <div class="barrier__article-example">
+                <img src="./img/fieldset-accesible.png" alt="Código con ejemplo de checkbox/radio button accesibles">
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
   </div>
 
