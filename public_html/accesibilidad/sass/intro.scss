@@ -65,10 +65,12 @@ $padding-container: 0 20px;
       &-ph {
         text-align: right;
         font-size: 24px;
+        font-family: "Nothing You Could Do", cursive;
         color: #000000;
       }
       &-author {
         font-style: italic;
+        color: $gray;
       }
     }
 
@@ -94,24 +96,40 @@ $padding-container: 0 20px;
             background: $gray1;
           }
         }
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
       }
       &-p {
-        @media (min-width: 1000px) {
+        color: $gray;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      &-mainp {
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.8pt;
+        strong {
           color: #000000;
+          font-size: 22px;
         }
       }
       &-reason1 {
         display: block;
         margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 1.5;
         letter-spacing: 0.8pt;
         @media (min-width: 1000px) {
           color: #666666;
         }
       }
       &-reason2 {
-        font-size: 16px;
+        font-size: 18px;
         letter-spacing: 1pt;
-        font-weight: normal;
+        line-height: 1.5;
       }
     }
   }
