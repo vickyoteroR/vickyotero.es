@@ -35,6 +35,13 @@ $gray2: #7a7979;
   float: left;
   &__input {
     display: none;
+    &:checked {
+      & + .barrier__label {
+        &:before {
+          display: none;
+        }
+      }
+    }
     &:checked ~ .barrier__article {
       float: left;
       -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
