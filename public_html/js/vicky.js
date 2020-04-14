@@ -27,3 +27,32 @@ document.addEventListener("click", function(eventmobilenav) {
 //   const barrier__article = document.querySelectorAll(barrier_article_tag);
 //   console.log("barrier__article", barrier__article);
 // });
+
+const barrier_label = document.querySelectorAll(".barrier__label").length;
+//const barrier_label = document.querySelectorAll(".barrier__label");
+//console.log("barrier_label", barrier_label);
+
+for (var i = 0; i < barrier_label; i++) {
+  const labelSelected = 0;
+  if (barrier_label.options[i].selected) {
+    labelSelected++;
+  }
+}
+
+// [].forEach.call(document.querySelectorAll(".barrier__label"), function(eventaccordion) {
+//   eventaccordion.addEventListener("click", function() {
+//     if (!barrier_label) return;
+//     console.log(eventaccordion);
+
+//   });
+// });
+
+// for (i = 0; i <= barrier_label; i++) {
+//   //console.log("label" + i);
+
+//   document.addEventListener("click", function(eventaccordion) {
+//     if (!barrier_label) return;
+//     console.log(eventaccordion);
+
+//   });
+// }
