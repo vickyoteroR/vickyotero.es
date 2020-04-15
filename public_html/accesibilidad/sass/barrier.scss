@@ -91,9 +91,12 @@ $gray2: #7a7979;
     justify-content: flex-start;
     align-items: center;
     background: $gray1;
-    &:hover {
-      background: #ffffff;
+    &.on {
+      background: red;
     }
+    // &:hover {
+    //   background: #ffffff;
+    // }
     &:after,
     &:before {
       content: "";
@@ -109,8 +112,6 @@ $gray2: #7a7979;
       -o-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg);
-    }
-    &:after {
     }
   }
 

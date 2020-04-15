@@ -16,43 +16,31 @@ document.addEventListener("click", function(eventmobilenav) {
   main_nav.classList.toggle("collapse");
 });
 
-//accesibility accordion
-// const barrier_label = document.querySelectorAll(".barrier__label");
-// console.log("barrier_label", barrier_label);
+//acordeón accesibilidad
 
-// document.addEventListener("click", function(eventaccordion) {
-//   if (!barrier_label) return;
+//const barrier_label_all = document.querySelector(".barrier__label");
 
-//   const barrier_article_tag = ".barrier__article";
-//   const barrier__article = document.querySelectorAll(barrier_article_tag);
-//   console.log("barrier__article", barrier__article);
-// });
-
-const barrier_label = document.querySelectorAll(".barrier__label").length;
-//const barrier_label = document.querySelectorAll(".barrier__label");
-//console.log("barrier_label", barrier_label);
-
-for (var i = 0; i < barrier_label; i++) {
-  const labelSelected = 0;
-  if (barrier_label.options[i].selected) {
-    labelSelected++;
-  }
-}
-
+// const barrier_label = document.querySelectorAll(".barrier__label").length;
 // [].forEach.call(document.querySelectorAll(".barrier__label"), function(eventaccordion) {
 //   eventaccordion.addEventListener("click", function() {
 //     if (!barrier_label) return;
 //     console.log(eventaccordion);
+//     eventaccordion.classList.toggle("on");
 
 //   });
 // });
 
-// for (i = 0; i <= barrier_label; i++) {
-//   //console.log("label" + i);
+const barrier_label = document.querySelectorAll(".barrier").length;
+//console.log(barrier_label);
+[].forEach.call(document.querySelectorAll(".barrier"), function(eventaccordion) {
+  eventaccordion.addEventListener("click", function() {
+    console.log(eventaccordion);
+    if (!barrier_label) return;
+    console.log(eventaccordion);
 
-//   document.addEventListener("click", function(eventaccordion) {
-//     if (!barrier_label) return;
-//     console.log(eventaccordion);
+    eventaccordion.classList.add("on");
 
-//   });
-// }
+    const barrier_getsiblings = document.querySelectorAll(".barrier").classList.contains("on");
+    console.log(barrier_getsiblings);
+  });
+});
