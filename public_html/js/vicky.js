@@ -18,18 +18,6 @@ document.addEventListener("click", function(eventmobilenav) {
 
 //acordeón accesibilidad
 
-//const barrier_label_all = document.querySelector(".barrier__label");
-
-// const barrier_label = document.querySelectorAll(".barrier__label").length;
-// [].forEach.call(document.querySelectorAll(".barrier__label"), function(eventaccordion) {
-//   eventaccordion.addEventListener("click", function() {
-//     if (!barrier_label) return;
-//     console.log(eventaccordion);
-//     eventaccordion.classList.toggle("on");
-
-//   });
-// });
-
 const barrier_label = document.querySelectorAll(".barrier").length;
 //console.log(barrier_label);
 [].forEach.call(document.querySelectorAll(".barrier"), function(eventaccordion) {
@@ -38,9 +26,6 @@ const barrier_label = document.querySelectorAll(".barrier").length;
     if (!barrier_label) return;
     console.log(eventaccordion);
 
-    eventaccordion.classList.add("on");
-
-    const barrier_getsiblings = document.querySelectorAll(".barrier").classList.contains("on");
-    console.log(barrier_getsiblings);
+    //eventaccordion.classList.add("on");
   });
 });

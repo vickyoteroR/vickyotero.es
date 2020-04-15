@@ -5,6 +5,7 @@
 .navbar-header,
 .navbar-collapse {
   background: $gray !important;
+  border-bottom: 1px solid #ffffff;
 }
 
 .navbar-collapse.collapse .navbar-nav > li > a {
