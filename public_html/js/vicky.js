@@ -6,11 +6,14 @@ $(window).load(function() {
 });
 
 //main-nav mobile
+
 const nav_toggle_button = "#nav-toggle";
 const nav_toggle = document.querySelector(nav_toggle_button);
-
+console.log(nav_toggle);
 document.addEventListener("click", function(eventmobilenav) {
-  if (!nav_toggle) return;
+  if (!eventmobilenav.target.matches("#nav-toggle")) return;
+  //if (!nav_toggle) return;
+  console.log(eventmobilenav);
   const main_nav_collapse = "#main-nav";
   const main_nav = document.querySelector(main_nav_collapse);
   main_nav.classList.toggle("collapse");

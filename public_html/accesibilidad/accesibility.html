@@ -47,24 +47,28 @@
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<body class="accesibility ">
+<body class="accesibility myself">
 
   <header class="header">
 
     <nav class="navbar navbar-inverse">
-      <div class="navbar-header">
-        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
-            class="icon-bar"></span><span class="icon-bar"></span>
-        </button>
-      </div>
-      <!--/.navbar-header-->
-      <div id="main-nav" class="collapse navbar-collapse" style="background: none;">
-        <ul class="nav navbar-nav" id="mainNav">
-          <li><a href="../index.html" class="scroll-link">Inicio</a></li>
-          <li class="active"><a href="accesibilidad/accesibility.html" class="scroll-link">Accesibilidad</a></li>
 
-        </ul>
+      <!--/.navbar-header-->
+      <div class="navbar-header">
+        <div class="navbar-toggle">
+          <div class="logo-vicky">
+            <a href="../index.html">
+              Vicky Otero
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="main-nav" class="collapse navbar-collapse" style="background: none;">
+        <div class="logo-vicky">
+          <a href="../index.html">
+            Vicky Otero
+          </a>
+        </div>
       </div>
       <!--/.navbar-collapse-->
     </nav>
@@ -140,11 +144,27 @@
             </article>
           </li>
           <li class="barrier">
+            <input id="barrier__language" class="barrier__input" name="barrera idioma" type="checkbox">
+            <label class="barrier__label" for="barrier__language">
+              <span class="barrier__text">Marcado de idioma</span>
+            </label>
+            <article class="barrier__article barrier__article-small">
+              <h3 class="sr-only">Marcado de idioma</h3>
+              <div class="barrier__article-data">
+                <p class="text">Con el fin de que el lector de pantalla lea correctamente el DOM, no se nos puede
+                  olvidar especificar el idioma correcto al principio</p>
+              </div>
+              <div class="barrier__article-example">
+                <img src="./img/language.png" alt="Código con ejemplo de marcado de idioma">
+              </div>
+            </article>
+          </li>
+          <li class="barrier">
             <input id="barrier__img" class="barrier__input" name="images" type="checkbox">
             <label class="barrier__label" for="barrier__img">
               <span class="barrier__text">IMÁGENES</span>
             </label>
-            <article class="barrier__article barrier__article-small">
+            <article class="barrier__article barrier__article-medium">
               <h3 class="sr-only">Imágenes</h3>
               <div class="barrier__article-data">
                 <ul>
@@ -177,7 +197,7 @@
             <input id="barrier__aria" class="barrier__input" name="aria-hidden/sr-only" type="checkbox">
             <label class="barrier__label" for="barrier__aria"><span class="barrier__text">aria-hidden /
                 SR-ONLY</span></label>
-            <article class="barrier__article barrier__article-large">
+            <article class="barrier__article barrier__article-xlarge">
               <h3 class="sr-only">aria-hidden / sr-only</h3>
               <div class="barrier__article-data">
                 <p class="text">Una técnica importante para mejorar la experiencia de los usarios que necesitan
@@ -258,9 +278,9 @@
             <article class="barrier__article barrier__article-medium">
               <h3 class="sr-only">Menú</h3>
               <div class="barrier__article-data">
-                <p class="text">Siempre que creemos un menú o cualquier interacción, se debe implementar dicha
-                  interacción tanto
-                  teclado como para rató
+                <p class="text">Siempre que creemos un menú o <strong class="barrier__strong">cualquier interacción, se
+                    debe implementar tanto
+                    teclado como para ratón.</strong>
                 </p>
               </div>
               <div class="barrier__article-example">
@@ -276,13 +296,23 @@
             <article class="barrier__article barrier__article-small">
               <h3 class="sr-only">Ventanas modales</h3>
               <div class="barrier__article-data">
-                <p class="text">Las ventanas modales siempre se posicionan al final del DOM. Por dicho motivo, el lector
+                <p class="text">Las ventanas modales siempre se posicionan al final del
+                  DOM. Por dicho motivo, el lector
                   no puede seguir interactuando, al no poder encontrar el contenido que debería obtener
-                  con la última acción realizada. Para evitar que el usuario tenga
-                  que recorrer todo el DOM hasta el final, estas son las medidas a tomar:
+                  con la última acción realizada. <strong class="barrier__strong">Para evitar que el usuario tenga
+                    que recorrer todo el DOM hasta el final</strong>, estas son las medidas a tomar:
                 </p>
-                <p class="text">1. Quitar la página de detrás con aria ="hidden"</p>
-                <p class="text">2. Evitar que con el teclado "tab" nos saque de la ventana modal
+                <ul class="barrier__article-optionUl">
+                  <li class="barrier__article-option">
+                    <p class="text"><strong class="barrier__strong">Quitar la página de detrás con aria
+                        ="hidden"</strong></p>
+
+                  </li>
+                  <li class="barrier__article-option">
+                    <p class="text"><strong class="barrier__strong">Evitar que con el teclado (TAB) nos saque de la
+                        ventana modal</strong>
+                  </li>
+                </ul>
                 </p>
               </div>
 
@@ -295,10 +325,11 @@
               <h3 class="sr-only">Formularios</h3>
               <div class="barrier__article-data">
                 <p class="text">
-                  Es muy importante que en los formularios se especifique el atrituto for="name" del
-                  <strong>label</strong>
+                  Es muy importante que en los formularios se especifique el atrituto
+                  <strong class="barrier__strong">for="name" del
+                    label</strong>
                   en
-                  concordancia con el id="name" del <strong>input</strong> .
+                  concordancia con el <strong class="barrier__strong">id="name" del input</strong> .
                 </p>
               </div>
               <div class="barrier__article-example">
@@ -313,12 +344,14 @@
             <label class="barrier__label" for="barrier__fieldset"><span class="barrier__text">CHECKBOX / RADIO
                 BUTTON</span></label>
             <article class="barrier__article barrier__article-large">
-              <h3 class="sr-only">HECKBOX / RADIO BUTTON</h3>
+              <h3 class="sr-only">CHECKBOX / RADIO BUTTON</h3>
               <div class="barrier__article-data">
                 <p class="text">
-                  Cuando en un formulario tenemos varios checkbox / checkbox button, se deben agrupar en un
-                  <strong>fieldset</strong>
-                  con un <strong>lengend</strong> que determinará de que se tratan las opciones ofertadas.
+                  Cuando en un formulario tenemos <strong class="barrier__strong"> varios checkbox / radio
+                    button</strong>, se deben agrupar en un
+                  <strong class="barrier__strong">fieldset</strong>
+                  con un <strong class="barrier__strong">lengend</strong> que determinará de que se tratan las opciones
+                  ofertadas.
                 </p>
               </div>
               <div class="barrier__article-example">
@@ -330,7 +363,25 @@
       </div>
     </section>
   </div>
+  <footer class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="social pull-right">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/vickyotero/"><i class="fa fa-linkedin"></i></a>
+            <a href="mailto:vicky.vickyotero@gmail.com" title="vicky.vickyotero@gmail.com">
+              <i class="fa fa-envelope"></i>
+              <span class="mail">vicky.vickyotero@gmail.com</span>
+            </a>
+          </span>
+        </div>
 
+      </div>
+
+    </div>
+
+  </footer>
   <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
 
   <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->

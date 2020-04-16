@@ -15,7 +15,7 @@ $html-red: #8a6051;
     flex-direction: column;
     align-items: space-evenly;
     justify-content: center;
-    background: $gray;
+    background: #3b84b5;
     @media (min-width: 1000px) {
       width: 75%;
       padding-left: 10%;
@@ -107,9 +107,9 @@ $html-red: #8a6051;
     &.on {
       background: red;
     }
-    // &:hover {
-    //   background: #ffffff;
-    // }
+    &:hover {
+      background: #3b84b5;
+    }
     &:after,
     &:before {
       content: "";
@@ -163,6 +163,7 @@ $html-red: #8a6051;
     }
     .text {
       color: $gray;
+      font-size: 16px;
     }
     &-optionUl {
       padding: 20px;
@@ -182,7 +183,7 @@ $html-red: #8a6051;
         height: 8px;
         display: block;
         position: absolute;
-        top: 15px;
+        top: 12px;
         left: 0;
         border-radius: 100%;
         margin-top: -6px;
