@@ -1,28 +1,37 @@
-@import'../variables';
+@import "../variables";
 
-.myself footer {
+.myself {
+  .copyright {
     background: $yellow;
+    color: #6d6d6d;
+    padding: 0;
+    .container {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
 
     .social {
-        padding-right: 1em;
+      padding-right: 1em;
 
-        a {
-            color: $gray;
+      a {
+        color: $gray;
 
-            &:hover {
-                color: $blue;
-            }
+        &:hover {
+          color: $blue;
         }
+      }
     }
+  }
 }
-
 
 /*footer*/
 footer .pull-right,
 footer .pull-right a {
-    font-family: 'League Gothic', arial, sans-serif;
+  font-family: "League Gothic", arial, sans-serif;
 }
 
 footer .mail {
-    font-size: 60%;
+  font-size: 60%;
 }
