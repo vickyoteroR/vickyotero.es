@@ -1,9 +1,3 @@
-$gray: #434d59;
-$green: #50bfa0;
-$yellow: #f2c438;
-$red: #f25749;
-$blue: #34a6bf;
-$gray1: #f0f4f4;
 $heigh-header: 70px;
 $padding-container: 0 20px;
 %mod-1080 {
@@ -61,7 +55,7 @@ $padding-container: 0 20px;
         width: 100%;
         margin: 0;
         border: 0;
-        background: $yellow;
+        background: $footer;
         @media (min-width: 1000px) {
           padding-left: 105px;
         }

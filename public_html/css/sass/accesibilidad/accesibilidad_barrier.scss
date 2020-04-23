@@ -1,12 +1,3 @@
-$green: #50bfa0;
-$yellow: #f2c438;
-$red: #f25749;
-$blue: #34a6bf;
-$gray: #434d59;
-$gray1: #f0f4f4;
-$gray2: #7a7979;
-$html-red: #8a6051;
-
 .blocktitle {
   @media (min-width: 1000px) {
     height: 160px;
@@ -115,9 +106,7 @@ ul {
     justify-content: flex-start;
     align-items: center;
     background: $gray1;
-    &.on {
-      background: red;
-    }
+
     &:hover {
       background: #ffffff;
     }
