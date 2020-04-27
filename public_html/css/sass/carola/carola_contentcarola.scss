@@ -1,19 +1,7 @@
-/* Color Theme Swatches in Hex */
-$colorgreen1: #17ac7b;
-$colorgreen2: #00755f;
-$colorgreen2: #005b52;
-$colorred1: #e54a14;
-$colorred2: #f18805;
-$colorred3: #ed9c02;
-$coloryellow1: #f2cb05;
-$coloryellow2: #fbcd00;
-$colorpurple1: #914bf2;
-$colorblue1: #4bb2f2;
-
 .contentcarola {
   max-width: 106em;
   width: 100%;
-  height: calc(100vh - 127px);
+  height: calc(100vh - 120px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,13 +9,14 @@ $colorblue1: #4bb2f2;
   padding-top: 100px;
   .paintcarola {
     width: 100%;
+    max-width: 1200px;
     .active {
       &#glasses {
-        fill: $colorred2 !important;
+        fill: $colorpurple1 !important;
       }
       &#trouser {
         .paintcarola___area {
-          fill: $colorred1 !important;
+          fill: $colorblue1 !important;
         }
       }
       &#pullover {

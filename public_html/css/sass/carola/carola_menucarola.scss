@@ -1,14 +1,3 @@
-/* Color menu */
-$colorgreen1: #17ac7b;
-$colorgreen2: #00755f;
-$colorgreen3: #005b52;
-$colorred1: #e54a14;
-$colorred2: #f18805;
-$colorred3: #ed9c02;
-$coloryellow1: #f2cb05;
-$coloryellow2: #fbcd00;
-$colorpurple1: #914bf2;
-$colorblue1: #4bb2f2;
 //vars
 $fg: #00bcd4;
 $green-color: #de797a;
@@ -17,8 +6,8 @@ $pi: 3.14;
 $hamburger-spacing: 8px;
 //config
 $menu-items: 4;
-$open-distance: 105px;
 $opening-angle: $pi * 2;
+$menu-items-width: 100px;
 
 //extend
 
@@ -39,12 +28,13 @@ $opening-angle: $pi * 2;
 }
 .menucarola {
   &__container {
+    float: left;
     width: 100%;
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 50px;
+    justify-content: flex-start;
+    padding-top: 3em;
     @media (min-width: 875px) {
       flex-direction: row;
     }
@@ -96,7 +86,7 @@ $opening-angle: $pi * 2;
               @for $i from 1 through $menu-items {
                 &:nth-child(#{$i}) {
                   transition-duration: 90ms+ (100ms * $i);
-                  transform: translate3d((90px * $i), 0, 0);
+                  transform: translate3d(($menu-items-width * $i), 0, 0);
                 }
               }
             }
@@ -159,6 +149,7 @@ $opening-angle: $pi * 2;
         }
         & ~ ul {
           .menu-item {
+            width: $menu-items-width;
             border-radius: 0;
             transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
             z-index: 1;
@@ -184,19 +175,34 @@ $opening-angle: $pi * 2;
     .menu-item {
       @extend %ball;
       left: 0;
+      list-style: none;
 
-      &:hover {
-        background: white;
-      }
       @for $i from 1 through $menu-items {
         &:nth-child(#{$i}) {
           transition-duration: 180ms;
         }
       }
+      &-action {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+      }
+      &-title {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        line-height: 1;
 
-      .fa {
-        font-size: 150%;
-        line-height: 1.5;
+        z-index: -1;
+      }
+      &-ico {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
       }
     }
     .hamburger {
@@ -244,5 +250,10 @@ $opening-angle: $pi * 2;
         }
       }
     }
+  }
+}
+
+.menu-item {
+  [class~="bodypaint"] & {
   }
 }
