@@ -12,21 +12,21 @@
     max-width: 1200px;
     .active {
       &#glasses {
-        fill: $colorpurple1 !important;
+        fill: $colorred3 !important;
       }
       &#trouser {
         .paintcarola___area {
-          fill: $colorblue1 !important;
+          fill: $colorgreen1 !important;
         }
       }
       &#pullover {
         .paintcarola___area {
-          fill: #f25d27 !important;
+          fill: $colorpurple1 !important;
         }
       }
       &#sneackers {
         path {
-          fill: #03a696 !important;
+          fill: $coloryellow1 !important;
         }
       }
     }
