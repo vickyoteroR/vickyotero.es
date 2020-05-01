@@ -32,6 +32,16 @@
         }
       }
     }
+    #wowslider-container1 {
+      .ws_bullets {
+        bottom: -35px;
+        a {
+          &:after {
+            color: $gray;
+          }
+        }
+      }
+    }
   }
   &.myself {
     footer {
