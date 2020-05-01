@@ -1,0 +1,45 @@
+.sueno-azul {
+  .header__landing__nav {
+    background: none;
+    .logo-vicky {
+      a {
+        color: $gray;
+      }
+    }
+  }
+  .history {
+    height: calc(100vh - 120px);
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    &-content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-in {
+      -webkit-box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
+      box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
+      &:hover {
+        .ws_controls {
+          .ws_next,
+          .ws_prev {
+            background: rgba(50, 63, 168, 0.5);
+          }
+        }
+      }
+    }
+  }
+  &.myself {
+    footer {
+      background: none;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border: none;
+    }
+  }
+}
