@@ -9,7 +9,7 @@ $(window).load(function() {
 
 const nav_toggle_button = "#nav-toggle";
 const nav_toggle = document.querySelector(nav_toggle_button);
-console.log(nav_toggle);
+
 document.addEventListener("click", function(eventmobilenav) {
   if (!eventmobilenav.target.matches("#nav-toggle")) return;
   //if (!nav_toggle) return;
@@ -19,6 +19,14 @@ document.addEventListener("click", function(eventmobilenav) {
   main_nav.classList.toggle("collapse");
 });
 
+//navbar PORTFOLIO
+
+const portfolio_tab_tag = ".porfolio .tab";
+const portfolio_tab = document.querySelector(portfolio_tab_tag);
+document.addEventListener("click", function(eventportfolionav) {
+  if (!eventportfolionav.target.matches(portfolio_tab)) return;
+  console.log(eventportfolionav);
+});
 //acordeón accesibilidad
 
 const barrier_label = document.querySelectorAll(".barrier").length;

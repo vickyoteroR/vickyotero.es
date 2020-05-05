@@ -1,1 +1,107 @@
-.portfolio *{box-sizing:border-box}.portfolio nav .tab{display:inline-block;margin:0 0 0 5px;background:#cccccc}.portfolio nav .tab a{display:table;height:3em}.portfolio nav .tab a span{display:table-cell;vertical-align:middle;padding:0 1em;color:#666666;font-weight:700;font-size:120%;text-transform:uppercase}
+/* carola */
+.portfolio * {
+  box-sizing: border-box;
+}
+
+.portfolio nav > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio .tab-todo:hover, .portfolio .tab-todo:focus {
+  background: #4e5a68;
+}
+
+.portfolio .tab-todo:hover span, .portfolio .tab-todo:focus span {
+  color: #fafafa;
+}
+
+.portfolio .tab-rtve:hover, .portfolio .tab-rtve:focus {
+  background: #596676;
+}
+
+.portfolio .tab-rtve:hover span, .portfolio .tab-rtve:focus span {
+  color: #fafafa;
+}
+
+.portfolio .tab-vocento:hover, .portfolio .tab-vocento:focus {
+  background: #647385;
+}
+
+.portfolio .tab-vocento:hover span, .portfolio .tab-vocento:focus span {
+  color: #fafafa;
+}
+
+.portfolio .tab-veci:hover, .portfolio .tab-veci:focus {
+  background: #6f7f93;
+}
+
+.portfolio .tab-veci:hover span, .portfolio .tab-veci:focus span {
+  color: #fafafa;
+}
+
+.portfolio .tab-otros:hover, .portfolio .tab-otros:focus {
+  background: #7e8c9e;
+}
+
+.portfolio .tab-otros:hover span, .portfolio .tab-otros:focus span {
+  color: #fafafa;
+}
+
+.portfolio .tab-idea:hover, .portfolio .tab-idea:focus {
+  background: #8c99a9;
+}
+
+.portfolio .tab-idea:hover span, .portfolio .tab-idea:focus span {
+  color: #fafafa;
+}
+
+.portfolio .tab {
+  position: relative;
+  overflow: hidden;
+  transition: all, 0.5s;
+  border: 1px solid #7e8c9e;
+  margin: 0 0 5px 5px;
+}
+
+.portfolio .tab:hover {
+  border-radius: 10px;
+  border-color: transparent;
+  -moz-transition: all, 0.8s;
+  -o-transition: all, 0.8s;
+  -webkit-transition: all, 0.8s;
+  transition: all, 0.8s;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -moz-transition: all, 0.8s;
+  -o-transition: all, 0.8s;
+  -webkit-transition: all, 0.8s;
+  transition: all, 0.8s;
+  cursor: default;
+}
+
+.portfolio .tab:hover::before {
+  top: 0;
+}
+
+.portfolio .tab a {
+  display: table;
+  height: 3em;
+}
+
+.portfolio .tab a:focus {
+  text-decoration: none;
+}
+
+.portfolio .tab a span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 1em;
+  font-weight: 700;
+  font-size: 120%;
+  text-transform: uppercase;
+  color: #434d59;
+}

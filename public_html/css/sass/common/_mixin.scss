@@ -1,0 +1,19 @@
+@mixin transition($property, $duration) {
+  -moz-transition: $property, $duration;
+  -o-transition: $property, $duration;
+  -webkit-transition: $property, $duration;
+  transition: $property, $duration;
+}
+@mixin box-shadow($top, $left, $blur, $color) {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}

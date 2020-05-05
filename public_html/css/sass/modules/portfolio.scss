@@ -1,27 +1,90 @@
+@import "../common/color";
+@import "../common/mixin";
+
+//navitagionvar portfolio
+$portfolio-nav-item: todo, rtve, vocento, veci, otros, idea;
+$portfolio-nav-len: length($portfolio-nav-item);
+$portfolio-nav-bg: $gray;
+
 .portfolio {
   * {
     box-sizing: border-box;
   }
 
   nav {
-    .tab {
-      display: inline-block;
-      margin: 0 0 0 5px;
-      background: #cccccc;
-
-      a {
-        display: table;
-        height: 3em;
-
+    > ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  @for $i from 1 through $portfolio-nav-len {
+    $portfolio-nav-darken: $i * 5%;
+    .tab-#{nth($portfolio-nav-item, $i)} {
+      &:hover,
+      &:focus {
+        background: lighten($portfolio-nav-bg, $portfolio-nav-darken);
         span {
-          display: table-cell;
-          vertical-align: middle;
-          padding: 0 1em;
-          color: #666666;
-          font-weight: 700;
-          font-size: 120%;
-          text-transform: uppercase;
+          color: darken(#ffffff, 2%);
         }
+      }
+    }
+  }
+  .tab {
+    position: relative;
+    overflow: hidden;
+    transition: (all, 0.5s);
+    border: 1px solid lighten($gray, 25%);
+    margin: 0 0 5px 5px;
+
+    &:hover {
+      border-radius: 10px;
+      border-color: transparent;
+      @include transition(all, 0.8s);
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      @include transition(all, 0.8s);
+      cursor: default;
+      &::before {
+        top: 0;
+      }
+    }
+
+    // $portfolio-nav-item-Map: (
+    //   todo: $colorred1,
+    //   rtve: $colorred3,
+    //   vocento: $colorblue1,
+    //   veci: $colorgreen1,
+    //   otros: $colorpurple1,
+    //   idea: $coloryellow1
+    // );
+    // @each $portfolio-nav-item, $item-color in $portfolio-nav-item-Map {
+    //   &.tab-#{$portfolio-nav-item} {
+    //     &:hover {
+    //       border: 1px solid $item-color;
+    //       background: $item-color;
+    //       @include transition(all, 0.8s);
+    //     }
+    //   }
+    // }
+
+    a {
+      display: table;
+      height: 3em;
+      &:focus {
+        text-decoration: none;
+      }
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 1em;
+        font-weight: 700;
+        font-size: 120%;
+        text-transform: uppercase;
+        color: $gray;
       }
     }
   }
