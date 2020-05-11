@@ -46,7 +46,7 @@
       position: relative;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-      a {
+      .experience-in {
         display: block;
         position: relative;
         overflow: hidden;
@@ -104,7 +104,7 @@
   }
 }
 
-.da-thumbs li a div {
+.da-thumbs li .experience-in div {
   top: 0px;
   left: -100%;
   -webkit-transition: all 0.3s ease;
@@ -114,7 +114,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.da-thumbs li a:hover div {
+.da-thumbs li .experience-in:hover div {
   left: 0px;
 }
 
