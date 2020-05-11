@@ -85,6 +85,23 @@ footer .mail {
   background: none;
 }
 
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  .sueno-azul .header__landing__nav {
+    height: 100%;
+    position: absolute;
+    left: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    z-index: 500;
+  }
+}
+
 .sueno-azul .header__landing__nav .logo-vicky a {
   color: #434d59;
 }
@@ -104,23 +121,55 @@ footer .mail {
   justify-content: center;
 }
 
-.sueno-azul .history-in {
-  -webkit-box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
-  box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
-}
-
 .sueno-azul .history-in:hover .ws_controls .ws_next,
 .sueno-azul .history-in:hover .ws_controls .ws_prev {
   background: rgba(50, 63, 168, 0.5);
 }
 
+.sueno-azul .history #wowslider-container1 .ws_images {
+  max-width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: -1px -2px 21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -2px 21px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -2px 21px rgba(0, 0, 0, 0.75);
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  .sueno-azul .history #wowslider-container1 .ws_images {
+    max-width: 70%;
+  }
+}
+
 .sueno-azul .history #wowslider-container1 .ws_bullets {
-  bottom: -35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -55px;
+  left: 0;
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  .sueno-azul .history #wowslider-container1 .ws_bullets {
+    max-width: 70%;
+  }
+}
+
+.sueno-azul .history #wowslider-container1 .ws_bullets > div {
+  left: 0;
 }
 
 .sueno-azul .history #wowslider-container1 .ws_bullets a:after {
   color: #434d59;
+}
+
+@media (max-width: 812px) {
+  .sueno-azul .history #wowslider-container1 .ws_bullets {
+    display: none;
+  }
+}
+
+.sueno-azul .history .ws_playpause {
+  display: none;
 }
 
 .sueno-azul.myself footer {
@@ -129,4 +178,16 @@ footer .mail {
   position: absolute;
   bottom: 0;
   border: none;
+}
+
+@media (max-width: 812px) {
+  .sueno-azul.myself footer .container {
+    height: 35px;
+  }
+}
+
+@media (max-width: 812px) {
+  .sueno-azul.myself footer .mail {
+    display: none;
+  }
 }

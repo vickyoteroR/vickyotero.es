@@ -1,7 +1,18 @@
 @import "../common/color";
+@import "../common/mixin";
 .sueno-azul {
   .header__landing__nav {
     background: none;
+    @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+      height: 100%;
+      position: absolute;
+      left: -50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include rotate(-90deg);
+      z-index: 500;
+    }
     .logo-vicky {
       a {
         color: $gray;
@@ -21,9 +32,6 @@
       justify-content: center;
     }
     &-in {
-      -webkit-box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
-      box-shadow: -1px -2px 21px 3px rgba(0, 0, 0, 0.75);
       &:hover {
         .ws_controls {
           .ws_next,
@@ -34,14 +42,39 @@
       }
     }
     #wowslider-container1 {
+      .ws_images {
+        max-width: 80%;
+        margin: 0 auto;
+        @include box-shadow(-1px, -2px, 21px, rgba(0, 0, 0, 0.75));
+        @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+          max-width: 70%;
+        }
+      }
       .ws_bullets {
-        bottom: -35px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        bottom: -55px;
+        left: 0;
+        @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+          max-width: 70%;
+        }
+        > div {
+          left: 0;
+        }
+
         a {
           &:after {
             color: $gray;
           }
         }
+        @media (max-width: 812px) {
+          display: none;
+        }
       }
+    }
+    .ws_playpause {
+      display: none;
     }
   }
   &.myself {
@@ -51,6 +84,16 @@
       position: absolute;
       bottom: 0;
       border: none;
+      .container {
+        @media (max-width: 812px) {
+          height: 35px;
+        }
+      }
+      .mail {
+        @media (max-width: 812px) {
+          display: none;
+        }
+      }
     }
   }
 }
