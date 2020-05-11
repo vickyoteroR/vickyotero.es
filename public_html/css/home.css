@@ -277,7 +277,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.experience .da-thumbs li a {
+.experience .da-thumbs li .experience-in {
   display: block;
   position: relative;
   overflow: hidden;
@@ -285,12 +285,12 @@
   cursor: default;
 }
 
-.experience .da-thumbs li a img {
+.experience .da-thumbs li .experience-in img {
   display: block;
   position: relative;
 }
 
-.experience .da-thumbs li a .experience-data {
+.experience .da-thumbs li .experience-in .experience-data {
   position: absolute;
   background: #333;
   background: rgba(0, 0, 0, 0.8);
@@ -299,32 +299,32 @@
   padding: 15px;
 }
 
-.experience .da-thumbs li a .experience-data .experience-content {
+.experience .da-thumbs li .experience-in .experience-data .experience-content {
   width: 100%;
   height: 100%;
 }
 
-.experience .da-thumbs li a .experience-data .experience-content span {
+.experience .da-thumbs li .experience-in .experience-data .experience-content span {
   display: block;
   font-weight: normal;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.experience .da-thumbs li a .experience-data .experience-content span.experience__client {
+.experience .da-thumbs li .experience-in .experience-data .experience-content span.experience__client {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.experience .da-thumbs li a .experience-data .experience-content span.experience__consult {
+.experience .da-thumbs li .experience-in .experience-data .experience-content span.experience__consult {
   padding: 10px 0;
   text-transform: uppercase;
   font-size: 20px;
   color: #cccccc;
 }
 
-.experience .da-thumbs li a .experience-data .experience-content span.experience__date {
+.experience .da-thumbs li .experience-in .experience-data .experience-content span.experience__date {
   position: absolute;
   left: 15px;
   bottom: 15px;
@@ -332,7 +332,7 @@
   color: #f2c438;
 }
 
-.da-thumbs li a div {
+.da-thumbs li .experience-in div {
   top: 0px;
   left: -100%;
   -webkit-transition: all 0.3s ease;
@@ -342,7 +342,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.da-thumbs li a:hover div {
+.da-thumbs li .experience-in:hover div {
   left: 0px;
 }
 
