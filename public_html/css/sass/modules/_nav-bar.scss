@@ -11,9 +11,9 @@
   background: none !important;
 }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav a:hover,
-.navbar-inverse .navbar-nav a:focus {
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav a:hover,
+.navbar .navbar-nav a:focus {
   background: none;
   border-bottom: 2px solid #ffffff;
   border-radius: 0px;
@@ -26,9 +26,9 @@
   background: $gray;
 }
 
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle {
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus,
+.navbar .navbar-toggle {
   background: $gray;
   border-color: $gray;
 }
