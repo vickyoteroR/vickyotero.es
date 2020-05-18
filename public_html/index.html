@@ -96,7 +96,6 @@
     <header class="header">
         <nav class="navbar navbar-inverse" role="navigation">
             <div class="navbar-header">
-
                 <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
                     data-target="#main-nav">
                     <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
@@ -106,11 +105,21 @@
             <!--/.navbar-header-->
             <div id="main-nav" class="collapse navbar-collapse" style="background: none;">
                 <ul class="nav navbar-nav" id="mainNav">
-                    <li class="active"><a href="#home" class="scroll-link">Inicio</a></li>
-                    <li><a href="#experience" class="scroll-link">Experiencia</a></li>
-                    <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
-                    <li class=""><a href="#skills" class="scroll-link">Tecnologías</a></li>
-                    <li class=""><a href="accesibilidad/index.html" class="scroll-link">Accesibilidad</a></li>
+                    <li tabindex="0" role="menuitem" class="active">
+                        <a href="#home" class="scroll-link">Inicio</a>
+                    </li>
+                    <li tabindex="1" role="menuitem">
+                        <a href="#experience" class="scroll-link">Experiencia</a>
+                    </li>
+                    <li tabindex="2" role="menuitem">
+                        <a href="#portfolio" class="scroll-link">Portfolio</a>
+                    </li>
+                    <li tabindex="3" role="menuitem">
+                        <a href="#skills" class="scroll-link">Tecnologías</a>
+                    </li>
+                    <li tabindex="4" role="menuitem">
+                        <a href="accesibilidad/index.html" class="scroll-link">Accesibilidad</a>
+                    </li>
                 </ul>
             </div>
             <!--/.navbar-collapse-->
@@ -152,7 +161,7 @@
     <section id="experience" class="experience">
         <h3 class="sr-only">Experiencia</h3>
         <ul id="da-thumbs" class="da-thumbs">
-            <li class="experience-mod">
+            <li role="item" class="experience-mod">
                 <div class="experience-in">
                     <img src="images/experience/client_4.png" alt="Logo RTVE">
                     <div id="experience-rtve" class="experience-data">
@@ -165,7 +174,7 @@
                     </div>
                 </div>
             </li>
-            <li class="experience-mod">
+            <li role="item" class="experience-mod">
                 <div class="experience-in">
                     <img src="images/experience/client_1.png" alt="Logo DRAGADOS">
                     <div class="experience-data">
@@ -177,7 +186,7 @@
                     </div>
                 </div>
             </li>
-            <li class="experience-mod">
+            <li role="item" class="experience-mod">
                 <div class="experience-in">
                     <img src="images/experience/client_2.png" alt="Logo VOCENTO">
                     <div class="experience-data">
@@ -189,7 +198,7 @@
                     </div>
                 </div>
             </li>
-            <li class="experience-mod">
+            <li role="item" class="experience-mod">
                 <div class="experience-in">
                     <img src="images/experience/client_3.png" alt="logo Viajes el Corte Inglés">
                     <div class="experience-data">
@@ -217,27 +226,33 @@
 
             </div>
             <div class="row">
-                <nav id="filter" class="col-md-12">
+                <nav role="menubar" id="filter" class="col-md-12">
                     <ul>
-                        <li class="tab tab-todo"><a href="#" class="btn-theme btn-small current" data-filter="*">
+                        <li role="menuitem" class="tab tab-todo"><a href="#" class="btn-theme btn-small current"
+                                data-filter="*">
                                 <span>Todo</span>
                             </a></li>
-                        <li class="tab tab-rtve"><a href="#" class="btn-theme btn-small" data-filter=".RTVE">
+                        <li role="menuitem" class="tab tab-rtve"><a href="#" class="btn-theme btn-small"
+                                data-filter=".RTVE">
                                 <span>RTVE</span>
                             </a></li>
-                        <li class="tab tab-vocento"><a href="#" class="btn-theme btn-small" data-filter=".vocento">
+                        <li role="menuitem" class="tab tab-vocento"><a href="#" class="btn-theme btn-small"
+                                data-filter=".vocento">
                                 <span>Vocento</span>
                             </a>
                         </li>
-                        <li class="tab tab-veci"><a href="#" class="btn-theme btn-small" data-filter=".veci">
+                        <li role="menuitem" class="tab tab-veci"><a href="#" class="btn-theme btn-small"
+                                data-filter=".veci">
                                 <span>Viajes el Corte Inglés</span>
                             </a>
                         </li>
 
-                        <li class="tab tab-otros"><a href="#" class="btn-theme btn-small" data-filter=".otras">
+                        <li role="menuitem" class="tab tab-otros"><a href="#" class="btn-theme btn-small"
+                                data-filter=".otras">
                                 <span>Otros</span>
                             </a></li>
-                        <li class="tab tab-idea"><a href="#" class="btn-theme btn-small" data-filter=".idea">
+                        <li role="menuitem" class="tab tab-idea"><a href="#" class="btn-theme btn-small"
+                                data-filter=".idea">
                                 <span>Idea original</span>
                             </a></li>
                     </ul>
@@ -542,109 +557,109 @@
                 <div class="col-md-12">
                     <div class="row">
                         <ul class="tech">
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">HTML5</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_8.svg" alt="logo HTML5">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">CSS3</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_5.svg" alt="logo CSS3">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">SASS</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_14.svg" alt="logo SASS">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">BEM</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_3.svg" alt="logo BEM">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">bootstrap</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_4.svg" alt="logo bootstrap">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">git</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_6.svg" alt="logo git">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">GITHUB</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_7.svg" alt="logo GITHUB">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">AMP</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_2.svg" alt="AMP">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">jquery</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_12.svg" alt="logo jquery">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">node.js</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_16.svg" alt="logo node.js">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">npm</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_17.svg" alt="logo npm">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">wordpress</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_15.svg" alt="logo wordpress">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">Indesign</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_10.svg" alt="logo Indesign">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">Photoshop</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_13.svg" alt="logo Photoshop">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">Illustrator</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_9.svg" alt="Logo Illustrator">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">Invision</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_11.svg" alt="logo Invision">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">balsamic</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_1.svg" alt="balsamic">
                                 </span>
                             </li>
-                            <li class="tech-option">
+                            <li class="tech-option" role="item">
                                 <span class="sr-only">Abstract</span>
                                 <span class="tech-ima">
                                     <img src="tech/technology_18.svg" alt="Abstract">
@@ -698,9 +713,6 @@
 
         });
     </script>
-
-
-
 </body>
 
 </html>

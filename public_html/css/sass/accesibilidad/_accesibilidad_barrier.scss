@@ -91,7 +91,7 @@ ul {
     }
     &:checked ~ .barrier__article-xlarge {
       @media (min-width: 1000px) {
-        height: 500px;
+        height: 535px;
       }
       @media (max-width: 1000px) {
         height: auto;

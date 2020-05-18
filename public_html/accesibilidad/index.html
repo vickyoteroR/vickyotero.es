@@ -107,8 +107,9 @@
     <section class="ac-container content">
       <div class="content--box">
         <ul>
-          <li class="barrier">
-            <input id="barrier__semantic" class="barrier__input" name="barrera semántica" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__semantic" class="barrier__input" role="itemcheckbox" name="barrera semántica"
+              type="checkbox">
             <label class="barrier__label" for="barrier__semantic">
               <span class="barrier__text">Estructura semántica</span>
             </label>
@@ -123,8 +124,9 @@
               </div>
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__language" class="barrier__input" name="barrera idioma" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__language" class="barrier__input" role="itemcheckbox" name="barrera idioma"
+              type="checkbox">
             <label class="barrier__label" for="barrier__language">
               <span class="barrier__text">Marcado de idioma</span>
             </label>
@@ -139,8 +141,8 @@
               </div>
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__img" class="barrier__input" name="images" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__img" class="barrier__input" role="itemcheckbox" name="images" type="checkbox">
             <label class="barrier__label" for="barrier__img">
               <span class="barrier__text">IMÁGENES</span>
             </label>
@@ -173,8 +175,9 @@
               </div>
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__aria" class="barrier__input" name="aria-hidden/sr-only" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__aria" class="barrier__input" role="itemcheckbox" name="aria-hidden/sr-only"
+              type="checkbox">
             <label class="barrier__label" for="barrier__aria"><span class="barrier__text">aria-hidden /
                 SR-ONLY</span></label>
             <article class="barrier__article barrier__article-xlarge">
@@ -213,8 +216,8 @@
 
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__arialabel" class="barrier__input" name="aria-label" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__arialabel" class="barrier__input" role="itemcheckbox" name="aria-label" type="checkbox">
             <label class="barrier__label" for="barrier__arialabel"><span class="barrier__text">aria-label /
                 aria-labelledby / aria-describedby</span></label>
             <article class="barrier__article barrier__article-xlarge">
@@ -255,8 +258,94 @@
               </div>
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__menu" class="barrier__input" name="accordion-1" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__role" class="barrier__input" role="itemcheckbox" name="aria-label" type="checkbox">
+            <label class="barrier__label" for="barrier__role"><span class="barrier__text">Atributo
+                ROLE</span></label>
+            <article class="barrier__article barrier__article-xlarge">
+              <h3 class="sr-only">Atributo
+                ROLE</h3>
+              <div class="barrier__article-data">
+                <p class="text">proporciona información adicionalsobre el tipo de objeto que representa, es decir, el
+                  rol del elemento.
+                </p>
+                <ul class="barrier__article-optionUl">
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="navigation"</strong>: elemento que contiene una serie de
+                      elementos que se utilizan para navegar por el documento HTML.
+                    </p>
+                  </li>
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="menu"</strong>: elemento que es un tipo de widget que ofrece
+                      una lista de elecciones al usuario.
+                    </p>
+                  </li>
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="menubar"</strong>: este elemento es una subclase de
+                      role=menu. Suele representar una barra horizontal y visible.
+                    </p>
+                  </li>
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="menuitem"</strong>: elementos contenidos dentro de menu o
+                      menubar
+                    </p>
+                  </li>
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="menuitemcheckbox"</strong>: se trata de un elemento de
+                      role="menuitem" que tiene implícito un estado de 'checked' <br>(<strong
+                        class="barrier__strong">aria-checked="true" / aria-checked="false"</strong>).
+                    </p>
+                  </li>
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="menuitemradio"</strong>: igualmente es un elemento de
+                      role=menuitem y puede estar 'checkeado' o no. La diferencia con respecto a "menuitemcheckbox", es
+                      que no puede haber varios "menuitemradio" seleccionados a la vez.
+                    <p class="text">Por ello hay que tener en cuenta que, si dentro
+                      de un role=menu (o menubar) existe más de un grupo de role=menuitemradio, estos estén agrupados en
+                      un elemento con <strong class="barrier__strong">role=group</strong> para poder
+                      ser diferenciados, y que entre estos exista un elemento con <strong
+                        class="barrier__strong">role=separator</strong></p>
+
+                    </p>
+                  </li>
+                  <li class="barrier__article-option" role="item">
+                    <p class="text">
+                      <strong class="barrier__strong">role="separator"</strong>: Tal y como hemos detallado en el punto
+                      anterior, se trata de un atributo que separa grupos de elementos dentro de un mismo elemento,
+                      identificando así distintas áreas.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <!-- <nav role="navigation" aria-labelledby="categories">
+              <h2 id="categories">Menús</h2>
+              <ul role="group">
+                <li tabindex="0">
+                  <input role="menuitemradio" aria-checked="false" id="takeaway">
+                  <label for="takeaway" aria-labelledby="takeaway">Para llevar</label>
+                </li>
+                <li tabindex="1" role="menuitemradio">
+                  <input role="menuitemradio" aria-checked="true" id="notakeaway">
+                  <label for="notakeaway" notakeaway>Para recoger</label>
+                </li>
+              </ul>
+              <hr role="separator">
+              <ul role="group">
+                <li role="menuitemradio">India</li>
+                <li role="menuitemradio">China</li>
+                <li role="menuitemradio">Italiana</li>
+              </ul>
+            </nav> -->
+          </li>
+          <li class="barrier" role="item">
+            <input id="barrier__menu" class="barrier__input" role="itemcheckbox" name="accordion-1" type="checkbox">
             <label class="barrier__label" for="barrier__menu"><span class="barrier__text">MENU</span></label>
             <article class="barrier__article barrier__article-medium">
               <h3 class="sr-only">Menú</h3>
@@ -272,8 +361,8 @@
               </div>
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__modal" class="barrier__input" name="accordion-1" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__modal" class="barrier__input" role="itemcheckbox" name="accordion-1" type="checkbox">
             <label class="barrier__label" for="barrier__modal"><span class="barrier__text">VENTANAS
                 MODALES</span></label>
             <article class="barrier__article barrier__article-small">
@@ -301,10 +390,10 @@
 
             </article>
           </li>
-          <li class="barrier">
-            <input id="barrier__form" class="barrier__input" name="accordion-1" type="checkbox">
+          <li class="barrier" role="item">
+            <input id="barrier__form" class="barrier__input" role="itemcheckbox" name="accordion-1" type="checkbox">
             <label class="barrier__label" for="barrier__form"><span class="barrier__text">FORMULARIOS</span></label>
-            <article class="barrier__article barrier__article-large">
+            <article class="barrier__article barrier__article-xlarge">
               <h3 class="sr-only">Formularios</h3>
               <div class="barrier__article-data">
                 <p class="text">
@@ -320,14 +409,6 @@
                 <img src="./img/textarea-accesible.png" alt="Código con ejemplo de imágenes accesibles">
                 <img src="./img/select-accesible.png" alt="Código con ejemplo de imágenes accesibles">
               </div>
-            </article>
-          </li>
-          <li class="barrier">
-            <input id="barrier__fieldset" class="barrier__input" name="accordion-1" type="checkbox">
-            <label class="barrier__label" for="barrier__fieldset"><span class="barrier__text">CHECKBOX / RADIO
-                BUTTON</span></label>
-            <article class="barrier__article barrier__article-large">
-              <h3 class="sr-only">CHECKBOX / RADIO BUTTON</h3>
               <div class="barrier__article-data">
                 <p class="text">
                   Cuando en un formulario tenemos <strong class="barrier__strong"> varios checkbox / radio
@@ -342,6 +423,7 @@
               </div>
             </article>
           </li>
+
         </ul>
       </div>
     </section>
@@ -382,5 +464,3 @@
 </body>
 
 </html>
-
-<p class="sr-only">Texto oculto visualmente</p>
