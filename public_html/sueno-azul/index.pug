@@ -1,0 +1,152 @@
+doctype
+html(lang="es")
+  head
+    title Sueno azul
+    meta(content="text/html; UTF-8" http-equiv="Content-Type")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,user-scalable=1")
+    meta(name="author" content="Vicky Otero")
+    meta(name="description" content="Cuento sobre los fondos marinos")
+    link(rel="apple-touch-icon-precomposed" sizes="152x152" href="../images/favicon/favicon-152.png" type="image/x-icon")
+    link(rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/favicon/favicon-144.png" type="image/x-icon")
+    link(rel="apple-touch-icon-precomposed" sizes="120x120" href="../images/favicon/favicon-120.png" type="image/x-icon")
+    link(rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/favicon/favicon-114.png" type="image/x-icon")
+    link(rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/favicon/favicon-72.png" type="image/x-icon")
+    link(rel="apple-touch-icon-precomposed" sizes="57x57" href="../images/favicon/favicon-57.png" type="image/x-icon")
+    link(rel="shortcut icon", href="../images/favicon/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="../css/styles.css")
+    link(rel="stylesheet", href="../css/vicky-style.css")
+    link(rel="stylesheet", href="../css/font-awesome.min.css")
+    link(rel="stylesheet", href="../css/vicky-font.css")
+    link(rel="stylesheet", href="engine1/style.css")
+    link(rel="stylesheet", href="../css/suenoazul.css")
+    link(rel="text/javascript", src="engine1/jquery.js")
+  body.myself.sueno-azul
+    header.header__landing
+      nav.header__landing__nav
+        include ../pug_includes/header/logo
+    section.history
+      .history-content
+        .history-in
+          //- Start WOWSlider.com BODY section 
+      <section class="history">
+        <div class="history-content">
+          <div class="history-in">
+            #wowslider-container1
+              .ws_images
+                ul
+                  li     
+                    - const sueoazulImg = 'sueoazul'
+                    img(src=`data1/images/${sueoazulImg}.jpg $`, alt="")
+            //- <div id="wowslider-container1">
+            //-   <div class="ws_images">
+            //-     <ul>
+            //-       <li><img src="data1/images/sueoazul1.jpg" alt="sueoazul1" title="sueoazul1"
+            //-                   id="wows1_0" /></li>
+            //-       <li><img src="data1/images/sueoazul2.jpg" alt="sueoazul2" title="sueoazul2"
+            //-                   id="wows1_1" /></li>
+            //-       <li><img src="data1/images/sueoazul3.jpg" alt="sueoazul3" title="sueoazul3"
+            //-                   id="wows1_2" /></li>
+            //-       <li><img src="data1/images/sueoazul4.jpg" alt="sueoazul4" title="sueoazul4"
+            //-                   id="wows1_3" /></li>
+            //-       <li><img src="data1/images/sueoazul5.jpg" alt="sueoazul5" title="sueoazul5"
+            //-                   id="wows1_4" /></li>
+            //-       <li><img src="data1/images/sueoazul6.jpg" alt="sueoazul6" title="sueoazul6"
+            //-                   id="wows1_5" /></li>
+            //-       <li><img src="data1/images/sueoazul7.jpg" alt="sueoazul7" title="sueoazul7"
+            //-                   id="wows1_6" /></li>
+            //-       <li><img src="data1/images/sueoazul8.jpg" alt="sueoazul8" title="sueoazul8"
+            //-                   id="wows1_7" /></li>
+            //-       <li><img src="data1/images/sueoazul9.jpg" alt="sueoazul9" title="sueoazul9"
+            //-                   id="wows1_8" /></li>
+            //-       <li><img src="data1/images/sueoazul10.jpg" alt="sueoazul10" title="sueoazul10"
+            //-                   id="wows1_9" />
+            //-       </li>
+            //-       <li><img src="data1/images/sueoazul11.jpg" alt="sueoazul11" title="sueoazul11"
+            //-                   id="wows1_10" />
+            //-       </li>
+            //-       <li><img src="data1/images/sueoazul12.jpg" alt="sueoazul12" title="sueoazul12"
+            //-                   id="wows1_11" />
+            //-       </li>
+            //-       <li><a href="http://wowslider.net"><img src="data1/images/sueoazul13.jpg"
+            //-                         alt="slider jquery" title="sueoazul13" id="wows1_12" /></a>
+            //-       </li>
+            //-       <li><img src="data1/images/sueoazul14.jpg" alt="sueoazul14" title="sueoazul14"
+            //-                   id="wows1_13" />
+            //-       </li>
+            //-     </ul>
+            //-   </div>
+            //-   <div class="ws_bullets">
+            //-     <div>
+            //-           <a href="#wows1_0" title="sueoazul1"><span><img
+            //-                             src="data1/tooltips/sueoazul1.jpg"
+            //-                             alt="sueoazul1" />1</span></a>
+            //-           <a href="#wows1_1" title="sueoazul2"><span><img
+            //-                             src="data1/tooltips/sueoazul2.jpg"
+            //-                             alt="sueoazul2" />2</span></a>
+            //-           <a href="#wows1_2" title="sueoazul3"><span><img
+            //-                             src="data1/tooltips/sueoazul3.jpg"
+            //-                             alt="sueoazul3" />3</span></a>
+            //-           <a href="#wows1_3" title="sueoazul4"><span><img
+            //-                             src="data1/tooltips/sueoazul4.jpg"
+            //-                             alt="sueoazul4" />4</span></a>
+            //-           <a href="#wows1_4" title="sueoazul5"><span><img
+            //-                             src="data1/tooltips/sueoazul5.jpg"
+            //-                             alt="sueoazul5" />5</span></a>
+            //-           <a href="#wows1_5" title="sueoazul6"><span><img
+            //-                             src="data1/tooltips/sueoazul6.jpg"
+            //-                             alt="sueoazul6" />6</span></a>
+            //-           <a href="#wows1_6" title="sueoazul7"><span><img
+            //-                             src="data1/tooltips/sueoazul7.jpg"
+            //-                             alt="sueoazul7" />7</span></a>
+            //-           <a href="#wows1_7" title="sueoazul8"><span><img
+            //-                             src="data1/tooltips/sueoazul8.jpg"
+            //-                             alt="sueoazul8" />8</span></a>
+            //-           <a href="#wows1_8" title="sueoazul9"><span><img
+            //-                             src="data1/tooltips/sueoazul9.jpg"
+            //-                             alt="sueoazul9" />9</span></a>
+            //-           <a href="#wows1_9" title="sueoazul10"><span><img
+            //-                             src="data1/tooltips/sueoazul10.jpg"
+            //-                             alt="sueoazul10" />10</span></a>
+            //-           <a href="#wows1_10" title="sueoazul11"><span><img
+            //-                             src="data1/tooltips/sueoazul11.jpg"
+            //-                             alt="sueoazul11" />11</span></a>
+            //-           <a href="#wows1_11" title="sueoazul12"><span><img
+            //-                             src="data1/tooltips/sueoazul12.jpg"
+            //-                             alt="sueoazul12" />12</span></a>
+            //-           <a href="#wows1_12" title="sueoazul13"><span><img
+            //-                             src="data1/tooltips/sueoazul13.jpg"
+            //-                             alt="sueoazul13" />13</span></a>
+            //-           <a href="#wows1_13" title="sueoazul14"><span><img
+            //-                             src="data1/tooltips/sueoazul14.jpg"
+            //-                             alt="sueoazul14" />14</span></a>
+            //-     </div>
+            //-   </div>
+            //-   <div class="ws_script" style="position:absolute;left:-99%"><a
+            //-               href="http://wowslider.net">bootstrap
+            //-               slideshow</a> by
+            //-         WOWSlider.com v9.0m</div>
+            //-   <div class="ws_shadow"></div>
+            //- </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <script type="text/javascript" src="engine1/wowslider.js"></script>
+      <script type="text/javascript" src="engine1/script.js"></script>
+  //- End WOWSlider.com BODY section
+
+- function range(start, end) {
+  var arr = [];
+  for (var i = start; i < end; i++) arr.push(i);
+  return arr;
+  }
+  each i in range(1, 4)
+  include("slide-" + i)
+
+
+
+
+
+

@@ -169,7 +169,7 @@
 
 @media (min-width: 980px) {
   .technologies .tech-option {
-    width: 11.11111%;
+    width: 10%;
   }
 }
 
@@ -186,6 +186,8 @@
 }
 
 .technologies .tech-option img {
+  width: 100%;
+  height: auto;
   opacity: 0.8;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

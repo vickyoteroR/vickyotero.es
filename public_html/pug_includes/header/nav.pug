@@ -1,0 +1,46 @@
+
+//- - pages = ['inicio', 'experiencia', 'portfolio', 'tecnologías', 'accesibilidad']
+
+
+- 
+  let pages = [
+    {
+      title: 'inicio',
+      active: true
+    }, 
+    {
+      title: 'experiencia',
+      active: false
+    },
+    {
+      title: 'portfolio',
+      active: false
+    },
+    {
+      title: 'tecnologías',
+      active: false
+    },
+    {
+      title: 'accesibilidad',
+      active: false
+    }
+  ]
+
+header.header
+  nav.navbar.navbar-inverse
+    .navbar-header
+      button#nav-toggle.navbar-toggle(type="button" data-toggle="collapse" data-target="#main-nav")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse#main-nav  
+      ul.nav.navbar-nav#mainNav
+        each page in pages
+          if page.title === 'accesibilidad'
+            li: a.scroll-link(href=`${page.title}/index.html`)= page.title
+          else
+            li: a.scroll-link(href=`#${page.title}`)= page.title
+
+
+
